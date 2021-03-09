@@ -66,6 +66,9 @@ class SecurityGroupLookupSpec extends Specification {
     )
 
     then:
+    1 * amazonEC2.describeSecurityGroups(new DescribeSecurityGroupsRequest().withFilters(
+      new Filter("group-name", ["wideOpen"])
+    )) >> new DescribeSecurityGroupsResult().withSecurityGroups(new SecurityGroup())
     1 * amazonEC2.createSecurityGroup(new CreateSecurityGroupRequest(
       groupName: "wideOpen",
       description: "desc",
