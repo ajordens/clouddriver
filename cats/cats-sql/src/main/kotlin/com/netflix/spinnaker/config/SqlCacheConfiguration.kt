@@ -26,9 +26,6 @@ import com.netflix.spinnaker.kork.discovery.DiscoveryStatusListener
 import com.netflix.spinnaker.kork.dynamicconfig.DynamicConfigService
 import com.netflix.spinnaker.kork.sql.config.DefaultSqlConfiguration
 import com.netflix.spinnaker.kork.sql.config.SqlProperties
-import java.time.Clock
-import java.time.Duration
-import kotlin.contracts.ExperimentalContracts
 import kotlinx.coroutines.ObsoleteCoroutinesApi
 import kotlinx.coroutines.newFixedThreadPoolContext
 import kotlinx.coroutines.slf4j.MDCContext
@@ -44,6 +41,9 @@ import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.ComponentScan
 import org.springframework.context.annotation.Configuration
 import org.springframework.context.annotation.Import
+import java.time.Clock
+import java.time.Duration
+import kotlin.contracts.ExperimentalContracts
 
 const val coroutineThreadPrefix = "catsSql"
 

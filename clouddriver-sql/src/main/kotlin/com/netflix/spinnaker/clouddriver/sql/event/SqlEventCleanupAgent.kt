@@ -26,13 +26,13 @@ import com.netflix.spinnaker.config.SqlEventCleanupAgentConfigProperties.Compani
 import com.netflix.spinnaker.kork.annotations.VisibleForTesting
 import com.netflix.spinnaker.kork.dynamicconfig.DynamicConfigService
 import com.netflix.spinnaker.kork.sql.routing.withPool
-import java.sql.Timestamp
-import java.time.Duration
-import java.time.Instant
 import org.jooq.DSLContext
 import org.jooq.impl.DSL.field
 import org.jooq.impl.DSL.table
 import org.slf4j.LoggerFactory
+import java.sql.Timestamp
+import java.time.Duration
+import java.time.Instant
 
 /**
  * Cleans up [SpinnakerEvent]s (by [Aggregate]) that are older than a configured number of days.

@@ -6,13 +6,11 @@ import com.netflix.spinnaker.cats.sql.SqlUtil
 import com.netflix.spinnaker.clouddriver.cache.CustomScheduledAgent
 import com.netflix.spinnaker.clouddriver.core.provider.CoreProvider
 import com.netflix.spinnaker.clouddriver.sql.SqlAgent
-import java.time.Clock
-import java.util.concurrent.TimeUnit
 import org.jooq.DSLContext
-import org.jooq.SQLDialect
-import org.jooq.impl.DSL.field
 import org.jooq.impl.DSL.table
 import org.slf4j.LoggerFactory
+import java.time.Clock
+import java.util.concurrent.TimeUnit
 
 class SqlTableMetricsAgent(
   private val jooq: DSLContext,

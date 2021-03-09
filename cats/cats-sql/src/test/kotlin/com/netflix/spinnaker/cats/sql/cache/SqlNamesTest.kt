@@ -15,17 +15,15 @@
  */
 package com.netflix.spinnaker.cats.sql.cache
 
-import com.netflix.spinnaker.config.SqlConstraints
 import com.netflix.spinnaker.config.SqlConstraintsInitializer
-import com.netflix.spinnaker.config.SqlConstraintsProperties
 import dev.minutest.junit.JUnit5Minutests
 import dev.minutest.rootContext
 import org.jooq.SQLDialect
-import java.lang.IllegalArgumentException
 import strikt.api.expect
 import strikt.api.expectThat
 import strikt.assertions.isA
 import strikt.assertions.isEqualTo
+import java.lang.IllegalArgumentException
 
 class SqlNamesTest : JUnit5Minutests {
 

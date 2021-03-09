@@ -7,11 +7,11 @@ import com.netflix.spinnaker.cats.sql.SqlProviderCache
 import com.netflix.spinnaker.clouddriver.cache.CustomScheduledAgent
 import com.netflix.spinnaker.clouddriver.core.provider.CoreProvider
 import com.netflix.spinnaker.clouddriver.sql.SqlAgent
+import org.slf4j.LoggerFactory
+import org.springframework.context.ApplicationContext
 import java.time.Clock
 import java.util.concurrent.TimeUnit
 import kotlin.contracts.ExperimentalContracts
-import org.slf4j.LoggerFactory
-import org.springframework.context.ApplicationContext
 
 @ExperimentalContracts
 class SqlCleanupStaleOnDemandCachesAgent(

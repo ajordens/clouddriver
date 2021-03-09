@@ -25,9 +25,7 @@ import com.netflix.spinnaker.cats.test.TestAgent
 import com.netflix.spinnaker.cats.test.TestProvider
 import com.netflix.spinnaker.clouddriver.core.provider.agent.Namespace.INSTANCES
 import com.netflix.spinnaker.clouddriver.core.provider.agent.Namespace.SERVER_GROUPS
-import com.netflix.spinnaker.config.SqlConstraints
 import com.netflix.spinnaker.config.SqlConstraintsInitializer
-import com.netflix.spinnaker.config.SqlConstraintsProperties
 import com.netflix.spinnaker.kork.sql.test.SqlTestUtil
 import de.huxhorn.sulky.ulid.ULID
 import dev.minutest.junit.JUnit5Minutests
@@ -111,9 +109,8 @@ class SqlUnknownAgentCleanupAgentTest : JUnit5Minutests {
     }
   }
 
-  fun defaultSqlNames() : SqlNames =
+  fun defaultSqlNames(): SqlNames =
     SqlNames(sqlConstraints = SqlConstraintsInitializer.getDefaultSqlConstraints(SQLDialect.MYSQL))
-
 
   private inner class Fixture {
     val testDatabase = SqlTestUtil.initTcMysqlDatabase()

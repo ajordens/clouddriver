@@ -26,9 +26,9 @@ class SqlConstraints(
 ) {
 
   constructor(defaultConstraints: SqlConstraints, constraintsProperties: SqlConstraintsProperties) : this(
-      constraintsProperties.maxTableNameLength ?: defaultConstraints.maxTableNameLength,
-      constraintsProperties.maxIdLength ?: defaultConstraints.maxIdLength,
-      constraintsProperties.maxAgentLength ?: defaultConstraints.maxAgentLength
+    constraintsProperties.maxTableNameLength ?: defaultConstraints.maxTableNameLength,
+    constraintsProperties.maxIdLength ?: defaultConstraints.maxIdLength,
+    constraintsProperties.maxAgentLength ?: defaultConstraints.maxAgentLength
   )
 }
 
@@ -42,7 +42,7 @@ class SqlConstraintsProperties {
 object SqlConstraintsInitializer {
 
   fun getDefaultSqlConstraints(dialect: SQLDialect): SqlConstraints =
-    when(dialect) {
+    when (dialect) {
       SQLDialect.POSTGRES ->
         // https://www.postgresql.org/docs/current/limits.html
         SqlConstraints(63, Int.MAX_VALUE, Int.MAX_VALUE)

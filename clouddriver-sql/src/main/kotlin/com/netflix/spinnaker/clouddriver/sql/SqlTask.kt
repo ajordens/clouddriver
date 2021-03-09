@@ -21,8 +21,8 @@ import com.netflix.spinnaker.clouddriver.data.task.Status
 import com.netflix.spinnaker.clouddriver.data.task.Task
 import com.netflix.spinnaker.clouddriver.data.task.TaskDisplayStatus
 import com.netflix.spinnaker.clouddriver.data.task.TaskState
-import java.util.concurrent.atomic.AtomicBoolean
 import org.slf4j.LoggerFactory
+import java.util.concurrent.atomic.AtomicBoolean
 
 /**
  * TOOD(rz): Refactor 'river to not use an active record pattern. This sucks.

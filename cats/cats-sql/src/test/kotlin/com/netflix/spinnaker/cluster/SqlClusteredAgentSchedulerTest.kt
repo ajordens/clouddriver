@@ -46,8 +46,12 @@ class SqlClusteredAgentSchedulerTest : JUnit5Minutests {
     }
 
     test("should shuffle agents") {
-      whenever(dynamicConfigService.getConfig(eq(Int::class.java), eq("sql.agent.max-concurrent-agents"),
-        any())).thenReturn(2)
+      whenever(
+        dynamicConfigService.getConfig(
+          eq(Int::class.java), eq("sql.agent.max-concurrent-agents"),
+          any()
+        )
+      ).thenReturn(2)
       val invocations = mutableListOf<String>()
       val agentExec = AgentExecution {
         invocations.add(it.agentType)
@@ -73,10 +77,11 @@ class SqlClusteredAgentSchedulerTest : JUnit5Minutests {
       println("Agent invocations:\n$actual1\n$actual2\n$actual3\n$actual4")
       assertFalse(
         actual1 == actual2 &&
-        actual2 == actual3 &&
-        actual3 == actual4,
+          actual2 == actual3 &&
+          actual3 == actual4,
         "Expected variation in agent order of execution, " +
-          "but the same agents ran in the same order: " + actual1)
+          "but the same agents ran in the same order: " + actual1
+      )
     }
   }
 
@@ -110,10 +115,18 @@ class SqlClusteredAgentSchedulerTest : JUnit5Minutests {
     init {
       whenever(nodeStatusProvider.isNodeEnabled).thenReturn(true)
       whenever(nodeIdentity.nodeIdentity).thenReturn("node1")
-      whenever(dynamicConfigService.getConfig(eq(String::class.java), eq("sql.agent.disabled-agents"),
-        any())).thenReturn("")
-      whenever(dynamicConfigService.getConfig(eq(Long::class.java), eq("sql.agent.release-threshold-ms"),
-        any())).thenReturn(50000L)
+      whenever(
+        dynamicConfigService.getConfig(
+          eq(String::class.java), eq("sql.agent.disabled-agents"),
+          any()
+        )
+      ).thenReturn("")
+      whenever(
+        dynamicConfigService.getConfig(
+          eq(Long::class.java), eq("sql.agent.release-threshold-ms"),
+          any()
+        )
+      ).thenReturn(50000L)
 
       // empty agent locks in db
       val sss: SelectSelectStep<Record2<Any, Any>> = mock()
@@ -140,11 +153,13 @@ class SqlClusteredAgentSchedulerTest : JUnit5Minutests {
       whenever(dus.where(any<Condition>())).thenReturn(dcs)
 
       whenever(intervalProvider.getInterval(any())).thenReturn(interval)
-      whenever(agentExecutionPool.submit(any())).thenAnswer(Answer {
-        val r: Runnable = it.getArgument(0)
-        r.run()
-        object: FutureTask<Runnable>({ r }) { }
-      })
+      whenever(agentExecutionPool.submit(any())).thenAnswer(
+        Answer {
+          val r: Runnable = it.getArgument(0)
+          r.run()
+          object : FutureTask<Runnable>({ r }) { }
+        }
+      )
     }
 
     fun scheduleAgent(name: String, agentExec: AgentExecution) {

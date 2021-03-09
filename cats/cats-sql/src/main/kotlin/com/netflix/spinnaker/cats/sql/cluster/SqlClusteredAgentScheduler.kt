@@ -30,6 +30,11 @@ import com.netflix.spinnaker.cats.sql.SqlUtil
 import com.netflix.spinnaker.config.ConnectionPools
 import com.netflix.spinnaker.kork.dynamicconfig.DynamicConfigService
 import com.netflix.spinnaker.kork.sql.routing.withPool
+import org.jooq.DSLContext
+import org.jooq.impl.DSL.field
+import org.jooq.impl.DSL.table
+import org.slf4j.LoggerFactory
+import org.springframework.dao.DataIntegrityViolationException
 import java.sql.SQLException
 import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.ExecutorService
@@ -38,11 +43,6 @@ import java.util.concurrent.ScheduledExecutorService
 import java.util.concurrent.TimeUnit
 import java.util.regex.Pattern
 import java.util.regex.Pattern.CASE_INSENSITIVE
-import org.jooq.DSLContext
-import org.jooq.impl.DSL.field
-import org.jooq.impl.DSL.table
-import org.slf4j.LoggerFactory
-import org.springframework.dao.DataIntegrityViolationException
 
 /**
  * IMPORTANT: Using SQL for locking isn't a good idea. By enabling this scheduler, you'll be adding a fair amount of
@@ -175,8 +175,10 @@ class SqlClusteredAgentScheduler(
       .filterNot { disabledAgents.contains(it.key) }
       .toMutableMap()
 
-    log.debug("Agents running: {}, agents disabled: {}. Picking next agents to run from: {}",
-      activeAgents.keys, disabledAgents, candidateAgentLocks.keys)
+    log.debug(
+      "Agents running: {}, agents disabled: {}. Picking next agents to run from: {}",
+      activeAgents.keys, disabledAgents, candidateAgentLocks.keys
+    )
 
     withPool(POOL_NAME) {
       val existingLocks = jooq.select(field("agent_name"), field("lock_expiry"))
@@ -220,7 +222,8 @@ class SqlClusteredAgentScheduler(
           log.warn(
             "Dropping caching agent: {}. Wanted to run {} agents, but a max of {} was configured and there are " +
               "already {} currently running. Consider increasing sql.agent.max-concurrent-agents",
-          it.key, candidateAgentLocks.size, maxConcurrentAgents, skip)
+            it.key, candidateAgentLocks.size, maxConcurrentAgents, skip
+          )
           return@forEach
         }
         trimmedCandidates[it.key] = it.value

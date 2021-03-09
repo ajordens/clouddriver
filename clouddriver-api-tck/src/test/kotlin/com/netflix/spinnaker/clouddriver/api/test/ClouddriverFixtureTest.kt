@@ -17,14 +17,12 @@
 
 package com.netflix.spinnaker.clouddriver.api.test
 
-import com.netflix.spinnaker.clouddriver.data.task.TaskRepository
-import com.netflix.spinnaker.clouddriver.data.task.InMemoryTaskRepository
-import com.netflix.spinnaker.clouddriver.event.persistence.InMemoryEventRepository
-import com.netflix.spinnaker.clouddriver.event.persistence.EventRepository
-import com.netflix.spinnaker.cats.mem.InMemoryCache
-import com.netflix.spinnaker.cats.cache.WriteableCache
-import com.netflix.spinnaker.cats.mem.InMemoryNamedCacheFactory
 import com.netflix.spinnaker.cats.cache.NamedCacheFactory
+import com.netflix.spinnaker.cats.mem.InMemoryNamedCacheFactory
+import com.netflix.spinnaker.clouddriver.data.task.InMemoryTaskRepository
+import com.netflix.spinnaker.clouddriver.data.task.TaskRepository
+import com.netflix.spinnaker.clouddriver.event.persistence.EventRepository
+import com.netflix.spinnaker.clouddriver.event.persistence.InMemoryEventRepository
 import dev.minutest.junit.JUnit5Minutests
 import dev.minutest.rootContext
 import org.springframework.beans.factory.annotation.Autowired
