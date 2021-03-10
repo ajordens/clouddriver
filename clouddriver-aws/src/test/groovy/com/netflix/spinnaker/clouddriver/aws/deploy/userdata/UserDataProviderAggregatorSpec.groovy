@@ -12,7 +12,7 @@ import spock.lang.Unroll
 
 class UserDataProviderAggregatorSpec extends Specification {
 
-  UserDataProviderAggregator userDataProviderAggregator = new UserDataProviderAggregator([new UserDataProviderA(), new UserDataProviderB()], [new DefaultUserDataTokenizer(), new CustomTokenizer()])
+  UserDataProviderAggregator userDataProviderAggregator = new UserDataProviderAggregator([new UserDataProviderA(), new UserDataProviderBlank(), new UserDataProviderB()], [new DefaultUserDataTokenizer(), new CustomTokenizer()])
 
   static final String APP = 'app'
   static final String STACK = 'stack'
@@ -98,6 +98,12 @@ class UserDataProviderA implements UserDataProvider {
 class UserDataProviderB implements UserDataProvider {
   String getUserData(UserDataInput userDataRequest) {
     return "b"
+  }
+}
+
+class UserDataProviderBlank implements UserDataProvider {
+  String getUserData(UserDataInput userDataRequest) {
+    return ""
   }
 }
 

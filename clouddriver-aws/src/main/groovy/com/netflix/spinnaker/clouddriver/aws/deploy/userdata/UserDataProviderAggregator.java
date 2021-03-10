@@ -8,12 +8,12 @@ import com.netflix.spinnaker.clouddriver.aws.userdata.UserDataTokenizer;
 import com.netflix.spinnaker.kork.exceptions.UserException;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Base64;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * Aggregates all user data from the configured list of providers (see {@link UserDataProvider}).
@@ -75,20 +75,23 @@ public class UserDataProviderAggregator {
       allUserData =
           providers.stream().map(p -> p.getUserData(userDataInput)).collect(Collectors.toList());
     }
-    String data = String.join("\n", allUserData);
+    allUserData.add(userDataDecoded);
 
-    return result(Arrays.asList(data, userDataDecoded));
+    return result(allUserData);
   }
 
   private String result(List<String> parts) {
-    String result = String.join("\n", parts);
-    if (result.startsWith("\n")) {
-      result = result.trim();
-    }
+    String result =
+        parts.stream()
+            .filter(StringUtils::isNotBlank)
+            .map(String::trim)
+            .collect(Collectors.joining("\n"));
 
     if (result.isEmpty()) {
       return null;
     }
+
+    result = result + "\n";
 
     return Base64.getEncoder().encodeToString(result.getBytes(StandardCharsets.UTF_8));
   }
