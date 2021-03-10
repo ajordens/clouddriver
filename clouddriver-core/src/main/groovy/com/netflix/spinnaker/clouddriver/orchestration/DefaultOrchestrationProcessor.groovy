@@ -90,9 +90,10 @@ class DefaultOrchestrationProcessor implements OrchestrationProcessor {
   Task process(@Nullable String cloudProvider,
                @Nonnull List<AtomicOperation> atomicOperations,
                @Nonnull String clientRequestId) {
-    def orchestrationsId = registry.createId('orchestrations').withTag("cloudProvider", cloudProvider ?: "unknown")
-    def atomicOperationId = registry.createId('operations').withTag("cloudProvider", cloudProvider ?: "unknown")
-    def tasksId = registry.createId('tasks').withTag("cloudProvider", cloudProvider ?: "unknown")
+    cloudProvider = cloudProvider ?: "unknown"
+    def orchestrationsId = registry.createId('orchestrations').withTag("cloudProvider", cloudProvider)
+    def atomicOperationId = registry.createId('operations').withTag("cloudProvider", cloudProvider)
+    def tasksId = registry.createId('tasks').withTag("cloudProvider", cloudProvider)
 
     // Get the task (either an existing one, or a new one). If the task already exists, `shouldExecute` will be false
     // if the task is in a failed state and the failure is not retryable.
@@ -135,7 +136,7 @@ class DefaultOrchestrationProcessor implements OrchestrationProcessor {
               }
             }.call()
           } catch (AtomicOperationException e) {
-            task.updateStatus TASK_PHASE, "Orchestration failed: ${atomicOperation.class.simpleName} | ${e.class.simpleName}: [${e.errors.join(', ')}]"
+            task.updateStatus TASK_PHASE, "Orchestration failed: ${atomicOperation.class.simpleName} | ${e.class.simpleName}: [${e.errors.join(', ')}] (cloudProvider: ${cloudProvider})"
             task.addResultObjects([extractExceptionSummary(e, e.errors.join(", "), [operation: atomicOperation.class.simpleName])])
             failTask(task, e)
           } catch (DuplicateEventAggregateException e) {
@@ -152,7 +153,7 @@ class DefaultOrchestrationProcessor implements OrchestrationProcessor {
             if (!message) {
               message = stackTrace
             }
-            task.updateStatus TASK_PHASE, "Orchestration failed: ${atomicOperation.class.simpleName} | ${e.class.simpleName}: [${message}]"
+            task.updateStatus TASK_PHASE, "Orchestration failed: ${atomicOperation.class.simpleName} | ${e.class.simpleName}: [${message}] (cloudProvider: ${cloudProvider})"
             task.addResultObjects([extractExceptionSummary(e, message, [operation: atomicOperation.class.simpleName])])
 
             log.error(stackTrace)
