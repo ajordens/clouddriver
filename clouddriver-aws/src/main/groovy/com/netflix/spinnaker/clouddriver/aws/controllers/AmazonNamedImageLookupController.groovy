@@ -45,6 +45,8 @@ class AmazonNamedImageLookupController {
   private static final String EXCEPTION_REASON = 'Minimum of ' + MIN_NAME_FILTER + ' characters required to filter namedImages'
 
   private static final AMI_GLOB_PATTERN = /^ami-([a-f0-9]{8}|[a-f0-9]{17})$/
+  private static final BASE_AMI_NAME_PATTERN = ~/.*ancestor_name=([\w-]+).*/
+  private static final BASE_AMI_ID_PATTERN = ~/.*ancestor_id=([\w-]+).*/
 
   private final Cache cacheView
 
@@ -99,6 +101,16 @@ class AmazonNamedImageLookupController {
   private List<NamedImage> render(Collection<CacheData> namedImages, Collection<CacheData> images, String requestedName = null, String requiredRegion = null) {
     Map<String, NamedImage> byImageName = [:].withDefault { new NamedImage(imageName: it) }
 
+    def baseAmiName = { String description ->
+      def baseAmiNameMatcher = BASE_AMI_NAME_PATTERN.matcher(description)
+      return baseAmiNameMatcher.matches() ? baseAmiNameMatcher.group(1) : null
+    }
+
+    def baseAmiId = { String description ->
+      def baseAmiIdMatcher = BASE_AMI_ID_PATTERN.matcher(description)
+      return baseAmiIdMatcher.matches() ? baseAmiIdMatcher.group(1) : null
+    }
+
     cacheView.getAll(IMAGES.ns, namedImages.collect {
       (it.relationships[IMAGES.ns] ?: []).collect {
         it
@@ -106,7 +118,10 @@ class AmazonNamedImageLookupController {
     }.flatten() as Collection<String>).each {
       // associate tags with their AMI's image id
       byImageName[it.attributes.name as String].tagsByImageId[it.attributes.imageId as String] =
-        ((it.attributes.tags as List)?.collectEntries { [it.key.toLowerCase(), it.value] })
+        ((it.attributes.tags as List)?.collectEntries { [it.key.toLowerCase(), it.value] }) + [
+          "base_ami_name": baseAmiName(it.attributes.description as String),
+          "base_ami_id"  : baseAmiId(it.attributes.description as String)
+        ]
     }
 
     for (CacheData data : namedImages) {
@@ -129,7 +144,10 @@ class AmazonNamedImageLookupController {
       thisImage.attributes.creationDate = data.attributes.creationDate
       thisImage.accounts.add(namedImageKeyParts.account)
       thisImage.amis[amiKeyParts.region].add(amiKeyParts.imageId)
-      thisImage.tags.putAll((data.attributes.tags as List)?.collectEntries { [it.key.toLowerCase(), it.value] })
+      thisImage.tags.putAll((data.attributes.tags as List)?.collectEntries { [it.key.toLowerCase(), it.value] } + [
+        "base_ami_name": baseAmiName(data.attributes.description as String),
+        "base_ami_id"  : baseAmiId(data.attributes.description as String)
+      ])
       thisImage.tagsByImageId[data.attributes.imageId as String] = thisImage.tags
     }
 
