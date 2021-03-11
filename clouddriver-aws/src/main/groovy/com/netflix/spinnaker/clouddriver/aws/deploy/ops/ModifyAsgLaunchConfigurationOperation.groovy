@@ -19,6 +19,8 @@ package com.netflix.spinnaker.clouddriver.aws.deploy.ops
 import com.amazonaws.services.autoscaling.model.DisableMetricsCollectionRequest
 import com.amazonaws.services.autoscaling.model.UpdateAutoScalingGroupRequest
 import com.netflix.frigga.Names
+import com.netflix.spinnaker.clouddriver.orchestration.AtomicOperationException
+import com.netflix.spinnaker.clouddriver.orchestration.AtomicOperations
 import com.netflix.spinnaker.config.AwsConfiguration
 import com.netflix.spinnaker.clouddriver.aws.deploy.AmiIdResolver
 import com.netflix.spinnaker.clouddriver.aws.deploy.InstanceTypeUtils.BlockDeviceConfig
@@ -61,6 +63,17 @@ class ModifyAsgLaunchConfigurationOperation implements AtomicOperation<Void> {
 
     def asg = regionScopedProvider.asgService.getAutoScalingGroup(description.asgName)
     def existingLc = asg.launchConfigurationName
+
+    if (!existingLc) {
+      List<String> messages = ["No launchConfiguration found on server group $description.asgName"]
+      def ltName = asg.launchTemplate?.launchTemplateName
+      if (ltName) {
+        messages << "Found launchTemplate $ltName. Use operation type ${AtomicOperations.UPDATE_LAUNCH_TEMPLATE} to update serverGroup $description.asgName"
+      }
+      def failure = new AtomicOperationException("Unable to modify launch configuration for $description.asgName", messages)
+      failure.setRetryable(false)
+      throw failure
+    }
 
     def settings = lcBuilder.buildSettingsFromLaunchConfiguration(description.credentials, description.region, existingLc)
 

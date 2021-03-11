@@ -19,6 +19,7 @@ package com.netflix.spinnaker.clouddriver.aws.deploy.ops
 import com.amazonaws.services.autoscaling.AmazonAutoScaling
 import com.amazonaws.services.autoscaling.model.AutoScalingGroup
 import com.amazonaws.services.autoscaling.model.DisableMetricsCollectionRequest
+import com.amazonaws.services.autoscaling.model.LaunchTemplateSpecification
 import com.amazonaws.services.autoscaling.model.UpdateAutoScalingGroupRequest
 import com.amazonaws.services.ec2.AmazonEC2
 import com.amazonaws.services.ec2.model.DescribeImagesRequest
@@ -26,6 +27,7 @@ import com.amazonaws.services.ec2.model.DescribeImagesResult
 import com.amazonaws.services.ec2.model.DescribeVpcClassicLinkResult
 import com.amazonaws.services.ec2.model.Image
 import com.netflix.spinnaker.clouddriver.aws.userdata.UserDataOverride
+import com.netflix.spinnaker.clouddriver.orchestration.AtomicOperationException
 import com.netflix.spinnaker.config.AwsConfiguration
 import com.netflix.spinnaker.clouddriver.aws.deploy.InstanceTypeUtils.BlockDeviceConfig
 import com.netflix.spinnaker.clouddriver.aws.deploy.asg.LaunchConfigurationBuilder
@@ -88,6 +90,28 @@ class ModifyAsgLaunchConfigurationOperationSpec extends Specification {
     op.regionScopedProviderFactory = regionScopedProviderFactory
 
     op.blockDeviceConfig = blockDeviceConfig
+  }
+
+  void 'should fail if no launchConfigurationName present on server group'() {
+    setup:
+    def credential = TestCredential.named(account)
+    description.credentials = credential
+    description.region = region
+    description.asgName = asgName
+
+    when:
+    op.operate([])
+
+    then:
+    def ex = thrown(AtomicOperationException)
+    1 * asgService.getAutoScalingGroup(asgName) >> new AutoScalingGroup().withLaunchTemplate(new LaunchTemplateSpecification().withLaunchTemplateName("launchTemplate"))
+    ex.additionalAttributes.errors.size() == 2
+
+    where:
+    account = 'test'
+    app = 'foo'
+    region = 'us-east-1'
+    asgName = "$app-v001".toString()
   }
 
   void 'should not modify launch configuration if no changes would result'() {

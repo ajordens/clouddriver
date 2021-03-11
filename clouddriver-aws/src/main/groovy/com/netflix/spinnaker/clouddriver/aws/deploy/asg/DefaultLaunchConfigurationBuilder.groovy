@@ -35,6 +35,7 @@ import com.netflix.spinnaker.clouddriver.aws.services.SecurityGroupService
 import com.netflix.spinnaker.clouddriver.helpers.OperationPoller
 
 import groovy.util.logging.Slf4j
+import org.apache.commons.lang3.StringUtils
 import org.joda.time.LocalDateTime
 
 @Slf4j
@@ -69,6 +70,9 @@ class DefaultLaunchConfigurationBuilder implements LaunchConfigurationBuilder {
    */
   @Override
   LaunchConfigurationSettings buildSettingsFromLaunchConfiguration(AccountCredentials<?> account, String region, String launchConfigurationName) {
+    if (StringUtils.isBlank(launchConfigurationName)) {
+      throw new IllegalArgumentException("launchConfigurationName is required")
+    }
     LaunchConfiguration lc = asgService.getLaunchConfiguration(launchConfigurationName)
 
     String baseName = lc.launchConfigurationName

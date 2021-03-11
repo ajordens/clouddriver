@@ -19,6 +19,7 @@ package com.netflix.spinnaker.clouddriver.aws.deploy.asg
 
 import com.amazonaws.services.autoscaling.AmazonAutoScaling
 import com.amazonaws.services.autoscaling.model.CreateLaunchConfigurationRequest
+import com.netflix.spinnaker.clouddriver.aws.TestCredential
 import com.netflix.spinnaker.clouddriver.aws.deploy.userdata.DefaultUserDataTokenizer
 import com.netflix.spinnaker.clouddriver.aws.deploy.userdata.UserDataProviderAggregator
 import com.netflix.spinnaker.clouddriver.aws.userdata.UserDataOverride
@@ -45,6 +46,17 @@ class DefaultLaunchConfigurationBuilderSpec extends Specification {
   @Subject
   DefaultLaunchConfigurationBuilder builder = new DefaultLaunchConfigurationBuilder(autoScaling, asgService,
     securityGroupService, userDataProviderAggregator, null, deployDefaults)
+
+  void "should fail with missing launchConfigName"() {
+    when:
+    builder.buildSettingsFromLaunchConfiguration(TestCredential.named("test"), "foo", lcName)
+
+    then:
+    thrown(IllegalArgumentException)
+
+    where:
+    lcName << [null, "", " "]
+  }
 
   void "should lookup security groups when provided by name"() {
     when:
