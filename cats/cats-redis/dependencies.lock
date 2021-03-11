@@ -1,0 +1,3755 @@
+{
+    "annotationProcessor": {
+        "com.netflix.spinnaker.kork:kork-bom": {
+            "locked": "7.103.0"
+        },
+        "com.netflix.spinnaker.netflixplatform:netflixplatform-bom": {
+            "locked": "2.58.0"
+        },
+        "org.projectlombok:lombok": {
+            "locked": "1.18.12"
+        }
+    },
+    "compileClasspath": {
+        "ch.qos.logback:logback-classic": {
+            "locked": "1.2.3",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter-logging"
+            ]
+        },
+        "ch.qos.logback:logback-core": {
+            "locked": "1.2.3",
+            "transitive": [
+                "ch.qos.logback:logback-classic"
+            ]
+        },
+        "com.fasterxml.jackson.core:jackson-annotations": {
+            "locked": "2.11.1",
+            "transitive": [
+                "com.fasterxml.jackson.core:jackson-databind",
+                "com.fasterxml.jackson.datatype:jackson-datatype-jsr310"
+            ]
+        },
+        "com.fasterxml.jackson.core:jackson-core": {
+            "locked": "2.11.1",
+            "transitive": [
+                "com.fasterxml.jackson.core:jackson-databind",
+                "com.fasterxml.jackson.datatype:jackson-datatype-jsr310"
+            ]
+        },
+        "com.fasterxml.jackson.core:jackson-databind": {
+            "locked": "2.11.1",
+            "transitive": [
+                "com.fasterxml.jackson.datatype:jackson-datatype-jsr310",
+                "org.springframework.boot:spring-boot-actuator-autoconfigure"
+            ]
+        },
+        "com.fasterxml.jackson.datatype:jackson-datatype-jsr310": {
+            "locked": "2.11.1",
+            "transitive": [
+                "org.springframework.boot:spring-boot-actuator"
+            ]
+        },
+        "com.fasterxml:classmate": {
+            "locked": "1.5.1",
+            "transitive": [
+                "org.hibernate.validator:hibernate-validator"
+            ]
+        },
+        "com.github.ben-manes.caffeine:caffeine": {
+            "locked": "2.8.1",
+            "transitive": [
+                "com.github.ben-manes.caffeine:guava"
+            ]
+        },
+        "com.github.ben-manes.caffeine:guava": {
+            "locked": "2.8.1"
+        },
+        "com.github.zafarkhaja:java-semver": {
+            "locked": "0.9.0",
+            "transitive": [
+                "org.pf4j:pf4j"
+            ]
+        },
+        "com.google.code.findbugs:jsr305": {
+            "locked": "3.0.2",
+            "transitive": [
+                "com.google.guava:guava",
+                "com.netflix.spinnaker.kork:kork-annotations",
+                "com.netflix.spinnaker.kork:kork-core",
+                "com.netflix.spinnaker.kork:kork-exceptions"
+            ]
+        },
+        "com.google.errorprone:error_prone_annotations": {
+            "locked": "2.3.4",
+            "transitive": [
+                "com.github.ben-manes.caffeine:caffeine",
+                "com.google.guava:guava"
+            ]
+        },
+        "com.google.guava:failureaccess": {
+            "locked": "1.0.1",
+            "transitive": [
+                "com.google.guava:guava"
+            ]
+        },
+        "com.google.guava:guava": {
+            "locked": "28.2-jre",
+            "transitive": [
+                "com.github.ben-manes.caffeine:guava"
+            ]
+        },
+        "com.google.guava:listenablefuture": {
+            "locked": "9999.0-empty-to-avoid-conflict-with-guava",
+            "transitive": [
+                "com.google.guava:guava"
+            ]
+        },
+        "com.google.j2objc:j2objc-annotations": {
+            "locked": "1.3",
+            "transitive": [
+                "com.google.guava:guava"
+            ]
+        },
+        "com.netflix.spectator:spectator-api": {
+            "locked": "0.109.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-core",
+                "com.netflix.spinnaker.kork:kork-jedis"
+            ]
+        },
+        "com.netflix.spinnaker.clouddriver.internal:cats-core": {
+            "project": true
+        },
+        "com.netflix.spinnaker.clouddriver.internal:clouddriver-api": {
+            "project": true
+        },
+        "com.netflix.spinnaker.kork:kork-annotations": {
+            "locked": "7.103.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-core",
+                "com.netflix.spinnaker.kork:kork-plugins-api"
+            ]
+        },
+        "com.netflix.spinnaker.kork:kork-api": {
+            "locked": "7.103.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-core"
+            ]
+        },
+        "com.netflix.spinnaker.kork:kork-bom": {
+            "locked": "7.103.0"
+        },
+        "com.netflix.spinnaker.kork:kork-core": {
+            "locked": "7.103.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-jedis"
+            ]
+        },
+        "com.netflix.spinnaker.kork:kork-credentials-api": {
+            "locked": "7.103.0",
+            "transitive": [
+                "com.netflix.spinnaker.clouddriver.internal:clouddriver-api"
+            ]
+        },
+        "com.netflix.spinnaker.kork:kork-exceptions": {
+            "locked": "7.103.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-core"
+            ]
+        },
+        "com.netflix.spinnaker.kork:kork-jedis": {
+            "locked": "7.103.0"
+        },
+        "com.netflix.spinnaker.kork:kork-plugins-api": {
+            "locked": "7.103.0",
+            "transitive": [
+                "com.netflix.spinnaker.clouddriver.internal:clouddriver-api",
+                "com.netflix.spinnaker.kork:kork-api"
+            ]
+        },
+        "com.netflix.spinnaker.netflixplatform:netflixplatform-bom": {
+            "locked": "2.58.0"
+        },
+        "com.thoughtworks.qdox:qdox": {
+            "locked": "1.12.1",
+            "transitive": [
+                "org.codehaus.groovy:groovy-docgenerator"
+            ]
+        },
+        "commons-cli:commons-cli": {
+            "locked": "1.4",
+            "transitive": [
+                "org.codehaus.groovy:groovy-cli-commons"
+            ]
+        },
+        "info.picocli:picocli": {
+            "locked": "4.0.1",
+            "transitive": [
+                "org.codehaus.groovy:groovy-cli-picocli"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-annotations": {
+            "locked": "1.0.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-core",
+                "io.github.resilience4j:resilience4j-spring"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-bulkhead": {
+            "locked": "1.0.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-framework-common"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-circuitbreaker": {
+            "locked": "1.1.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-framework-common"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-circularbuffer": {
+            "locked": "1.0.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-consumer"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-consumer": {
+            "locked": "1.0.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-spring"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-core": {
+            "locked": "1.1.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-bulkhead",
+                "io.github.resilience4j:resilience4j-circuitbreaker",
+                "io.github.resilience4j:resilience4j-consumer",
+                "io.github.resilience4j:resilience4j-framework-common",
+                "io.github.resilience4j:resilience4j-ratelimiter",
+                "io.github.resilience4j:resilience4j-retry"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-framework-common": {
+            "locked": "1.0.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-spring"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-micrometer": {
+            "locked": "1.1.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-spring-boot2"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-ratelimiter": {
+            "locked": "1.0.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-framework-common"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-retry": {
+            "locked": "1.0.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-core",
+                "io.github.resilience4j:resilience4j-framework-common"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-spring": {
+            "locked": "1.0.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-spring-boot-common"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-spring-boot-common": {
+            "locked": "1.0.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-spring-boot2"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-spring-boot2": {
+            "locked": "1.0.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-core"
+            ]
+        },
+        "io.micrometer:micrometer-core": {
+            "locked": "1.3.5",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter-actuator"
+            ]
+        },
+        "io.vavr:vavr": {
+            "locked": "0.10.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-annotations",
+                "io.github.resilience4j:resilience4j-bulkhead",
+                "io.github.resilience4j:resilience4j-circuitbreaker",
+                "io.github.resilience4j:resilience4j-circularbuffer",
+                "io.github.resilience4j:resilience4j-consumer",
+                "io.github.resilience4j:resilience4j-core",
+                "io.github.resilience4j:resilience4j-framework-common",
+                "io.github.resilience4j:resilience4j-micrometer",
+                "io.github.resilience4j:resilience4j-ratelimiter",
+                "io.github.resilience4j:resilience4j-retry",
+                "io.github.resilience4j:resilience4j-spring",
+                "io.github.resilience4j:resilience4j-spring-boot-common",
+                "io.github.resilience4j:resilience4j-spring-boot2"
+            ]
+        },
+        "io.vavr:vavr-match": {
+            "locked": "0.10.0",
+            "transitive": [
+                "io.vavr:vavr"
+            ]
+        },
+        "jakarta.annotation:jakarta.annotation-api": {
+            "locked": "1.3.5",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter"
+            ]
+        },
+        "javax.annotation:javax.annotation-api": {
+            "locked": "1.3.2",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-plugins-api"
+            ]
+        },
+        "javax.validation:validation-api": {
+            "locked": "2.0.1.Final",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-framework-common",
+                "org.hibernate.validator:hibernate-validator"
+            ]
+        },
+        "jline:jline": {
+            "locked": "2.14.6",
+            "transitive": [
+                "org.codehaus.groovy:groovy-groovysh"
+            ]
+        },
+        "junit:junit": {
+            "locked": "4.13",
+            "transitive": [
+                "org.codehaus.groovy:groovy-test"
+            ]
+        },
+        "org.apache.ant:ant": {
+            "locked": "1.10.5",
+            "transitive": [
+                "org.codehaus.groovy:groovy-ant"
+            ]
+        },
+        "org.apache.ant:ant-launcher": {
+            "locked": "1.10.5",
+            "transitive": [
+                "org.apache.ant:ant"
+            ]
+        },
+        "org.apache.commons:commons-pool2": {
+            "locked": "2.7.0",
+            "transitive": [
+                "redis.clients:jedis"
+            ]
+        },
+        "org.apache.logging.log4j:log4j-api": {
+            "locked": "2.13.3",
+            "transitive": [
+                "org.apache.logging.log4j:log4j-to-slf4j"
+            ]
+        },
+        "org.apache.logging.log4j:log4j-to-slf4j": {
+            "locked": "2.13.3",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter-logging"
+            ]
+        },
+        "org.apiguardian:apiguardian-api": {
+            "locked": "1.1.0",
+            "transitive": [
+                "org.junit.platform:junit-platform-commons",
+                "org.junit.platform:junit-platform-engine",
+                "org.junit.platform:junit-platform-launcher"
+            ]
+        },
+        "org.aspectj:aspectjweaver": {
+            "locked": "1.9.5",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter-aop"
+            ]
+        },
+        "org.checkerframework:checker-qual": {
+            "locked": "3.1.0",
+            "transitive": [
+                "com.github.ben-manes.caffeine:caffeine",
+                "com.google.guava:guava"
+            ]
+        },
+        "org.codehaus.groovy:groovy": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all",
+                "org.codehaus.groovy:groovy-ant",
+                "org.codehaus.groovy:groovy-cli-commons",
+                "org.codehaus.groovy:groovy-cli-picocli",
+                "org.codehaus.groovy:groovy-console",
+                "org.codehaus.groovy:groovy-datetime",
+                "org.codehaus.groovy:groovy-docgenerator",
+                "org.codehaus.groovy:groovy-groovydoc",
+                "org.codehaus.groovy:groovy-groovysh",
+                "org.codehaus.groovy:groovy-jmx",
+                "org.codehaus.groovy:groovy-json",
+                "org.codehaus.groovy:groovy-jsr223",
+                "org.codehaus.groovy:groovy-macro",
+                "org.codehaus.groovy:groovy-nio",
+                "org.codehaus.groovy:groovy-servlet",
+                "org.codehaus.groovy:groovy-sql",
+                "org.codehaus.groovy:groovy-swing",
+                "org.codehaus.groovy:groovy-templates",
+                "org.codehaus.groovy:groovy-test",
+                "org.codehaus.groovy:groovy-test-junit5",
+                "org.codehaus.groovy:groovy-testng",
+                "org.codehaus.groovy:groovy-xml"
+            ]
+        },
+        "org.codehaus.groovy:groovy-all": {
+            "locked": "2.5.11"
+        },
+        "org.codehaus.groovy:groovy-ant": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-cli-commons": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-cli-picocli": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all",
+                "org.codehaus.groovy:groovy-console",
+                "org.codehaus.groovy:groovy-docgenerator",
+                "org.codehaus.groovy:groovy-groovydoc",
+                "org.codehaus.groovy:groovy-groovysh"
+            ]
+        },
+        "org.codehaus.groovy:groovy-console": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all",
+                "org.codehaus.groovy:groovy-groovysh"
+            ]
+        },
+        "org.codehaus.groovy:groovy-datetime": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-docgenerator": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-groovydoc": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all",
+                "org.codehaus.groovy:groovy-ant"
+            ]
+        },
+        "org.codehaus.groovy:groovy-groovysh": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-jmx": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-json": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-jsr223": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-macro": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-nio": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-servlet": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-sql": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-swing": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all",
+                "org.codehaus.groovy:groovy-console"
+            ]
+        },
+        "org.codehaus.groovy:groovy-templates": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all",
+                "org.codehaus.groovy:groovy-console",
+                "org.codehaus.groovy:groovy-docgenerator",
+                "org.codehaus.groovy:groovy-groovydoc",
+                "org.codehaus.groovy:groovy-servlet"
+            ]
+        },
+        "org.codehaus.groovy:groovy-test": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-test-junit5": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-testng": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-xml": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all",
+                "org.codehaus.groovy:groovy-servlet",
+                "org.codehaus.groovy:groovy-templates"
+            ]
+        },
+        "org.hamcrest:hamcrest": {
+            "locked": "2.2",
+            "transitive": [
+                "org.hamcrest:hamcrest-core"
+            ]
+        },
+        "org.hamcrest:hamcrest-core": {
+            "locked": "2.2",
+            "transitive": [
+                "junit:junit"
+            ]
+        },
+        "org.hdrhistogram:HdrHistogram": {
+            "locked": "2.1.11",
+            "transitive": [
+                "io.micrometer:micrometer-core"
+            ]
+        },
+        "org.hibernate.validator:hibernate-validator": {
+            "locked": "6.0.18.Final",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-framework-common"
+            ]
+        },
+        "org.jboss.logging:jboss-logging": {
+            "locked": "3.4.1.Final",
+            "transitive": [
+                "org.hibernate.validator:hibernate-validator"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-stdlib": {
+            "locked": "1.4.31",
+            "transitive": [
+                "com.netflix.spinnaker.clouddriver.internal:cats-core",
+                "com.netflix.spinnaker.clouddriver.internal:clouddriver-api",
+                "com.netflix.spinnaker.kork:kork-plugins-api"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-stdlib-common": {
+            "locked": "1.4.31",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-stdlib"
+            ]
+        },
+        "org.jetbrains:annotations": {
+            "locked": "19.0.0",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-stdlib"
+            ]
+        },
+        "org.junit.platform:junit-platform-commons": {
+            "locked": "1.6.2",
+            "transitive": [
+                "org.junit.platform:junit-platform-engine"
+            ]
+        },
+        "org.junit.platform:junit-platform-engine": {
+            "locked": "1.6.2",
+            "transitive": [
+                "org.junit.platform:junit-platform-launcher"
+            ]
+        },
+        "org.junit.platform:junit-platform-launcher": {
+            "locked": "1.6.2",
+            "transitive": [
+                "org.codehaus.groovy:groovy-test-junit5"
+            ]
+        },
+        "org.latencyutils:LatencyUtils": {
+            "locked": "2.0.3",
+            "transitive": [
+                "io.micrometer:micrometer-core"
+            ]
+        },
+        "org.opentest4j:opentest4j": {
+            "locked": "1.2.0",
+            "transitive": [
+                "org.junit.platform:junit-platform-engine"
+            ]
+        },
+        "org.pf4j:pf4j": {
+            "locked": "3.2.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-plugins-api"
+            ]
+        },
+        "org.projectlombok:lombok": {
+            "locked": "1.18.12"
+        },
+        "org.slf4j:jul-to-slf4j": {
+            "locked": "1.7.30",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter-logging"
+            ]
+        },
+        "org.slf4j:slf4j-api": {
+            "locked": "1.7.30",
+            "transitive": [
+                "ch.qos.logback:logback-classic",
+                "com.netflix.spinnaker.kork:kork-plugins-api",
+                "io.github.resilience4j:resilience4j-annotations",
+                "io.github.resilience4j:resilience4j-bulkhead",
+                "io.github.resilience4j:resilience4j-circuitbreaker",
+                "io.github.resilience4j:resilience4j-circularbuffer",
+                "io.github.resilience4j:resilience4j-consumer",
+                "io.github.resilience4j:resilience4j-core",
+                "io.github.resilience4j:resilience4j-framework-common",
+                "io.github.resilience4j:resilience4j-micrometer",
+                "io.github.resilience4j:resilience4j-ratelimiter",
+                "io.github.resilience4j:resilience4j-retry",
+                "io.github.resilience4j:resilience4j-spring",
+                "io.github.resilience4j:resilience4j-spring-boot-common",
+                "io.github.resilience4j:resilience4j-spring-boot2",
+                "org.apache.logging.log4j:log4j-to-slf4j",
+                "org.pf4j:pf4j",
+                "org.slf4j:jul-to-slf4j",
+                "redis.clients:jedis"
+            ]
+        },
+        "org.springframework.boot:spring-boot": {
+            "locked": "2.2.5.RELEASE",
+            "transitive": [
+                "org.springframework.boot:spring-boot-actuator",
+                "org.springframework.boot:spring-boot-autoconfigure",
+                "org.springframework.boot:spring-boot-starter"
+            ]
+        },
+        "org.springframework.boot:spring-boot-actuator": {
+            "locked": "2.2.5.RELEASE",
+            "transitive": [
+                "org.springframework.boot:spring-boot-actuator-autoconfigure"
+            ]
+        },
+        "org.springframework.boot:spring-boot-actuator-autoconfigure": {
+            "locked": "2.2.5.RELEASE",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter-actuator"
+            ]
+        },
+        "org.springframework.boot:spring-boot-autoconfigure": {
+            "locked": "2.2.5.RELEASE",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-core",
+                "org.springframework.boot:spring-boot-actuator-autoconfigure",
+                "org.springframework.boot:spring-boot-starter"
+            ]
+        },
+        "org.springframework.boot:spring-boot-starter": {
+            "locked": "2.2.5.RELEASE",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter-actuator",
+                "org.springframework.boot:spring-boot-starter-aop"
+            ]
+        },
+        "org.springframework.boot:spring-boot-starter-actuator": {
+            "locked": "2.2.5.RELEASE",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-core",
+                "com.netflix.spinnaker.kork:kork-jedis"
+            ]
+        },
+        "org.springframework.boot:spring-boot-starter-aop": {
+            "locked": "2.2.5.RELEASE",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-core"
+            ]
+        },
+        "org.springframework.boot:spring-boot-starter-logging": {
+            "locked": "2.2.5.RELEASE",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter"
+            ]
+        },
+        "org.springframework:spring-aop": {
+            "locked": "5.2.9.RELEASE",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter-aop",
+                "org.springframework:spring-context"
+            ]
+        },
+        "org.springframework:spring-beans": {
+            "locked": "5.2.9.RELEASE",
+            "transitive": [
+                "org.springframework:spring-aop",
+                "org.springframework:spring-context"
+            ]
+        },
+        "org.springframework:spring-context": {
+            "locked": "5.2.9.RELEASE",
+            "transitive": [
+                "org.springframework.boot:spring-boot",
+                "org.springframework.boot:spring-boot-actuator-autoconfigure"
+            ]
+        },
+        "org.springframework:spring-core": {
+            "locked": "5.2.9.RELEASE",
+            "transitive": [
+                "org.springframework.boot:spring-boot",
+                "org.springframework.boot:spring-boot-actuator-autoconfigure",
+                "org.springframework.boot:spring-boot-starter",
+                "org.springframework:spring-aop",
+                "org.springframework:spring-beans",
+                "org.springframework:spring-context",
+                "org.springframework:spring-expression"
+            ]
+        },
+        "org.springframework:spring-expression": {
+            "locked": "5.2.9.RELEASE",
+            "transitive": [
+                "org.springframework:spring-context"
+            ]
+        },
+        "org.springframework:spring-jcl": {
+            "locked": "5.2.9.RELEASE",
+            "transitive": [
+                "org.springframework:spring-core"
+            ]
+        },
+        "redis.clients:jedis": {
+            "locked": "3.1.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-jedis"
+            ]
+        }
+    },
+    "kotlinCompilerClasspath": {
+        "org.jetbrains.intellij.deps:trove4j": {
+            "locked": "1.0.20181211",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-compiler-embeddable"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-compiler-embeddable": {
+            "locked": "1.4.10"
+        },
+        "org.jetbrains.kotlin:kotlin-daemon-embeddable": {
+            "locked": "1.4.10",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-compiler-embeddable"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-reflect": {
+            "locked": "1.4.10",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-compiler-embeddable"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-script-runtime": {
+            "locked": "1.4.10",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-compiler-embeddable"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-stdlib": {
+            "locked": "1.4.10",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-compiler-embeddable",
+                "org.jetbrains.kotlin:kotlin-reflect"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-stdlib-common": {
+            "locked": "1.4.10",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-stdlib"
+            ]
+        },
+        "org.jetbrains:annotations": {
+            "locked": "13.0",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-stdlib"
+            ]
+        }
+    },
+    "kotlinCompilerPluginClasspath": {
+        "org.jetbrains.kotlin:kotlin-allopen": {
+            "locked": "1.4.10"
+        },
+        "org.jetbrains.kotlin:kotlin-gradle-plugin-api": {
+            "locked": "1.4.10",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-allopen"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-gradle-plugin-model": {
+            "locked": "1.4.10",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-allopen"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-script-runtime": {
+            "locked": "1.4.10",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-scripting-jvm"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-scripting-common": {
+            "locked": "1.4.10",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-scripting-compiler-impl-embeddable",
+                "org.jetbrains.kotlin:kotlin-scripting-jvm"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-scripting-compiler-embeddable": {
+            "locked": "1.4.10"
+        },
+        "org.jetbrains.kotlin:kotlin-scripting-compiler-impl-embeddable": {
+            "locked": "1.4.10",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-scripting-compiler-embeddable"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-scripting-jvm": {
+            "locked": "1.4.10",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-scripting-compiler-impl-embeddable"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-stdlib": {
+            "locked": "1.4.10",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-allopen",
+                "org.jetbrains.kotlin:kotlin-gradle-plugin-api",
+                "org.jetbrains.kotlin:kotlin-gradle-plugin-model",
+                "org.jetbrains.kotlin:kotlin-scripting-common",
+                "org.jetbrains.kotlin:kotlin-scripting-compiler-embeddable",
+                "org.jetbrains.kotlin:kotlin-scripting-compiler-impl-embeddable",
+                "org.jetbrains.kotlin:kotlin-scripting-jvm",
+                "org.jetbrains.kotlinx:kotlinx-coroutines-core"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-stdlib-common": {
+            "locked": "1.4.10",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-stdlib",
+                "org.jetbrains.kotlinx:kotlinx-coroutines-core"
+            ]
+        },
+        "org.jetbrains.kotlinx:kotlinx-coroutines-core": {
+            "locked": "1.3.7",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-scripting-common",
+                "org.jetbrains.kotlin:kotlin-scripting-compiler-impl-embeddable"
+            ]
+        },
+        "org.jetbrains:annotations": {
+            "locked": "13.0",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-stdlib"
+            ]
+        }
+    },
+    "kotlinKlibCommonizerClasspath": {
+        "org.jetbrains.intellij.deps:trove4j": {
+            "locked": "1.0.20181211",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-compiler-embeddable"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-compiler-embeddable": {
+            "locked": "1.4.10",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-klib-commonizer-embeddable"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-daemon-embeddable": {
+            "locked": "1.4.10",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-compiler-embeddable"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-klib-commonizer-embeddable": {
+            "locked": "1.4.10"
+        },
+        "org.jetbrains.kotlin:kotlin-reflect": {
+            "locked": "1.4.10",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-compiler-embeddable"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-script-runtime": {
+            "locked": "1.4.10",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-compiler-embeddable"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-stdlib": {
+            "locked": "1.4.10",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-compiler-embeddable",
+                "org.jetbrains.kotlin:kotlin-klib-commonizer-embeddable",
+                "org.jetbrains.kotlin:kotlin-reflect"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-stdlib-common": {
+            "locked": "1.4.10",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-stdlib"
+            ]
+        },
+        "org.jetbrains:annotations": {
+            "locked": "13.0",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-stdlib"
+            ]
+        }
+    },
+    "runtimeClasspath": {
+        "ch.qos.logback:logback-classic": {
+            "locked": "1.2.3",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter-logging"
+            ]
+        },
+        "ch.qos.logback:logback-core": {
+            "locked": "1.2.3",
+            "transitive": [
+                "ch.qos.logback:logback-classic"
+            ]
+        },
+        "com.beust:jcommander": {
+            "locked": "1.72",
+            "transitive": [
+                "org.testng:testng"
+            ]
+        },
+        "com.fasterxml.jackson.core:jackson-annotations": {
+            "locked": "2.11.1",
+            "transitive": [
+                "com.fasterxml.jackson.core:jackson-databind",
+                "com.fasterxml.jackson.datatype:jackson-datatype-jsr310",
+                "com.netflix.spinnaker.clouddriver.internal:cats-core"
+            ]
+        },
+        "com.fasterxml.jackson.core:jackson-core": {
+            "locked": "2.11.1",
+            "transitive": [
+                "com.fasterxml.jackson.core:jackson-databind",
+                "com.fasterxml.jackson.datatype:jackson-datatype-jsr310"
+            ]
+        },
+        "com.fasterxml.jackson.core:jackson-databind": {
+            "locked": "2.11.1",
+            "transitive": [
+                "com.fasterxml.jackson.datatype:jackson-datatype-jsr310",
+                "org.springframework.boot:spring-boot-actuator-autoconfigure"
+            ]
+        },
+        "com.fasterxml.jackson.datatype:jackson-datatype-jsr310": {
+            "locked": "2.11.1",
+            "transitive": [
+                "org.springframework.boot:spring-boot-actuator",
+                "org.springframework.boot:spring-boot-actuator-autoconfigure"
+            ]
+        },
+        "com.fasterxml:classmate": {
+            "locked": "1.5.1",
+            "transitive": [
+                "org.hibernate.validator:hibernate-validator"
+            ]
+        },
+        "com.github.ben-manes.caffeine:caffeine": {
+            "locked": "2.8.1",
+            "transitive": [
+                "com.github.ben-manes.caffeine:guava"
+            ]
+        },
+        "com.github.ben-manes.caffeine:guava": {
+            "locked": "2.8.1"
+        },
+        "com.github.zafarkhaja:java-semver": {
+            "locked": "0.9.0",
+            "transitive": [
+                "org.pf4j:pf4j"
+            ]
+        },
+        "com.google.code.findbugs:jsr305": {
+            "locked": "3.0.2",
+            "transitive": [
+                "com.google.guava:guava",
+                "com.netflix.spinnaker.kork:kork-annotations",
+                "com.netflix.spinnaker.kork:kork-core",
+                "com.netflix.spinnaker.kork:kork-exceptions"
+            ]
+        },
+        "com.google.errorprone:error_prone_annotations": {
+            "locked": "2.3.4",
+            "transitive": [
+                "com.github.ben-manes.caffeine:caffeine",
+                "com.google.guava:guava"
+            ]
+        },
+        "com.google.guava:failureaccess": {
+            "locked": "1.0.1",
+            "transitive": [
+                "com.google.guava:guava"
+            ]
+        },
+        "com.google.guava:guava": {
+            "locked": "28.2-jre",
+            "transitive": [
+                "com.github.ben-manes.caffeine:guava",
+                "com.netflix.spinnaker.clouddriver.internal:cats-core"
+            ]
+        },
+        "com.google.guava:listenablefuture": {
+            "locked": "9999.0-empty-to-avoid-conflict-with-guava",
+            "transitive": [
+                "com.google.guava:guava"
+            ]
+        },
+        "com.google.j2objc:j2objc-annotations": {
+            "locked": "1.3",
+            "transitive": [
+                "com.google.guava:guava"
+            ]
+        },
+        "com.netflix.frigga:frigga": {
+            "locked": "0.24.0",
+            "transitive": [
+                "com.netflix.spinnaker.clouddriver.internal:clouddriver-api",
+                "com.netflix.spinnaker.kork:kork-moniker"
+            ]
+        },
+        "com.netflix.spectator:spectator-api": {
+            "locked": "0.109.0",
+            "transitive": [
+                "com.netflix.spectator:spectator-ext-gc",
+                "com.netflix.spectator:spectator-ext-jvm",
+                "com.netflix.spectator:spectator-reg-micrometer",
+                "com.netflix.spinnaker.kork:kork-core",
+                "com.netflix.spinnaker.kork:kork-jedis"
+            ]
+        },
+        "com.netflix.spectator:spectator-ext-gc": {
+            "locked": "0.109.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-core"
+            ]
+        },
+        "com.netflix.spectator:spectator-ext-jvm": {
+            "locked": "0.109.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-core"
+            ]
+        },
+        "com.netflix.spectator:spectator-reg-micrometer": {
+            "locked": "0.109.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-core"
+            ]
+        },
+        "com.netflix.spinnaker.clouddriver.internal:cats-core": {
+            "project": true
+        },
+        "com.netflix.spinnaker.clouddriver.internal:clouddriver-api": {
+            "project": true,
+            "transitive": [
+                "com.netflix.spinnaker.clouddriver.internal:cats-core"
+            ]
+        },
+        "com.netflix.spinnaker.kork:kork-annotations": {
+            "locked": "7.103.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-api",
+                "com.netflix.spinnaker.kork:kork-core",
+                "com.netflix.spinnaker.kork:kork-credentials-api",
+                "com.netflix.spinnaker.kork:kork-plugins-api"
+            ]
+        },
+        "com.netflix.spinnaker.kork:kork-api": {
+            "locked": "7.103.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-core"
+            ]
+        },
+        "com.netflix.spinnaker.kork:kork-bom": {
+            "locked": "7.103.0",
+            "transitive": [
+                "com.netflix.spinnaker.clouddriver.internal:cats-core",
+                "com.netflix.spinnaker.clouddriver.internal:clouddriver-api"
+            ]
+        },
+        "com.netflix.spinnaker.kork:kork-core": {
+            "locked": "7.103.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-jedis"
+            ]
+        },
+        "com.netflix.spinnaker.kork:kork-credentials-api": {
+            "locked": "7.103.0",
+            "transitive": [
+                "com.netflix.spinnaker.clouddriver.internal:clouddriver-api"
+            ]
+        },
+        "com.netflix.spinnaker.kork:kork-exceptions": {
+            "locked": "7.103.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-core",
+                "com.netflix.spinnaker.kork:kork-credentials-api"
+            ]
+        },
+        "com.netflix.spinnaker.kork:kork-jedis": {
+            "locked": "7.103.0"
+        },
+        "com.netflix.spinnaker.kork:kork-moniker": {
+            "locked": "7.103.0",
+            "transitive": [
+                "com.netflix.spinnaker.clouddriver.internal:clouddriver-api"
+            ]
+        },
+        "com.netflix.spinnaker.kork:kork-plugins-api": {
+            "locked": "7.103.0",
+            "transitive": [
+                "com.netflix.spinnaker.clouddriver.internal:clouddriver-api",
+                "com.netflix.spinnaker.kork:kork-api"
+            ]
+        },
+        "com.netflix.spinnaker.netflixplatform:netflixplatform-bom": {
+            "locked": "2.58.0",
+            "transitive": [
+                "com.netflix.spinnaker.clouddriver.internal:cats-core",
+                "com.netflix.spinnaker.clouddriver.internal:clouddriver-api"
+            ]
+        },
+        "com.thoughtworks.qdox:qdox": {
+            "locked": "1.12.1",
+            "transitive": [
+                "org.codehaus.groovy:groovy-docgenerator"
+            ]
+        },
+        "com.typesafe:config": {
+            "locked": "1.4.0",
+            "transitive": [
+                "com.netflix.spectator:spectator-ext-jvm"
+            ]
+        },
+        "commons-cli:commons-cli": {
+            "locked": "1.4",
+            "transitive": [
+                "org.codehaus.groovy:groovy-cli-commons"
+            ]
+        },
+        "info.picocli:picocli": {
+            "locked": "4.0.1",
+            "transitive": [
+                "org.codehaus.groovy:groovy-cli-picocli"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-annotations": {
+            "locked": "1.0.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-core",
+                "io.github.resilience4j:resilience4j-spring"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-bulkhead": {
+            "locked": "1.0.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-framework-common"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-circuitbreaker": {
+            "locked": "1.1.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-framework-common"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-circularbuffer": {
+            "locked": "1.0.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-consumer"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-consumer": {
+            "locked": "1.0.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-spring"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-core": {
+            "locked": "1.1.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-bulkhead",
+                "io.github.resilience4j:resilience4j-circuitbreaker",
+                "io.github.resilience4j:resilience4j-consumer",
+                "io.github.resilience4j:resilience4j-framework-common",
+                "io.github.resilience4j:resilience4j-ratelimiter",
+                "io.github.resilience4j:resilience4j-retry"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-framework-common": {
+            "locked": "1.0.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-spring"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-micrometer": {
+            "locked": "1.1.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-spring-boot2"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-ratelimiter": {
+            "locked": "1.0.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-framework-common"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-retry": {
+            "locked": "1.0.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-core",
+                "io.github.resilience4j:resilience4j-framework-common"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-spring": {
+            "locked": "1.0.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-spring-boot-common"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-spring-boot-common": {
+            "locked": "1.0.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-spring-boot2"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-spring-boot2": {
+            "locked": "1.0.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-core"
+            ]
+        },
+        "io.micrometer:micrometer-core": {
+            "locked": "1.5.1",
+            "transitive": [
+                "com.netflix.spectator:spectator-reg-micrometer",
+                "org.springframework.boot:spring-boot-starter-actuator"
+            ]
+        },
+        "io.vavr:vavr": {
+            "locked": "0.10.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-annotations",
+                "io.github.resilience4j:resilience4j-bulkhead",
+                "io.github.resilience4j:resilience4j-circuitbreaker",
+                "io.github.resilience4j:resilience4j-circularbuffer",
+                "io.github.resilience4j:resilience4j-consumer",
+                "io.github.resilience4j:resilience4j-core",
+                "io.github.resilience4j:resilience4j-framework-common",
+                "io.github.resilience4j:resilience4j-micrometer",
+                "io.github.resilience4j:resilience4j-ratelimiter",
+                "io.github.resilience4j:resilience4j-retry",
+                "io.github.resilience4j:resilience4j-spring",
+                "io.github.resilience4j:resilience4j-spring-boot-common",
+                "io.github.resilience4j:resilience4j-spring-boot2"
+            ]
+        },
+        "io.vavr:vavr-match": {
+            "locked": "0.10.0",
+            "transitive": [
+                "io.vavr:vavr"
+            ]
+        },
+        "jakarta.annotation:jakarta.annotation-api": {
+            "locked": "1.3.5",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter"
+            ]
+        },
+        "javax.annotation:javax.annotation-api": {
+            "locked": "1.3.2",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-credentials-api",
+                "com.netflix.spinnaker.kork:kork-plugins-api"
+            ]
+        },
+        "javax.validation:validation-api": {
+            "locked": "2.0.1.Final",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-framework-common",
+                "org.hibernate.validator:hibernate-validator"
+            ]
+        },
+        "jline:jline": {
+            "locked": "2.14.6",
+            "transitive": [
+                "org.codehaus.groovy:groovy-groovysh"
+            ]
+        },
+        "junit:junit": {
+            "locked": "4.13",
+            "transitive": [
+                "org.codehaus.groovy:groovy-test"
+            ]
+        },
+        "org.apache-extras.beanshell:bsh": {
+            "locked": "2.0b6",
+            "transitive": [
+                "org.testng:testng"
+            ]
+        },
+        "org.apache.ant:ant": {
+            "locked": "1.10.5",
+            "transitive": [
+                "org.apache.ant:ant-junit",
+                "org.codehaus.groovy:groovy-ant"
+            ]
+        },
+        "org.apache.ant:ant-antlr": {
+            "locked": "1.9.13",
+            "transitive": [
+                "org.codehaus.groovy:groovy-ant"
+            ]
+        },
+        "org.apache.ant:ant-junit": {
+            "locked": "1.9.13",
+            "transitive": [
+                "org.codehaus.groovy:groovy-ant"
+            ]
+        },
+        "org.apache.ant:ant-launcher": {
+            "locked": "1.10.5",
+            "transitive": [
+                "org.apache.ant:ant",
+                "org.codehaus.groovy:groovy-ant"
+            ]
+        },
+        "org.apache.commons:commons-pool2": {
+            "locked": "2.7.0",
+            "transitive": [
+                "redis.clients:jedis"
+            ]
+        },
+        "org.apache.logging.log4j:log4j-api": {
+            "locked": "2.13.3",
+            "transitive": [
+                "org.apache.logging.log4j:log4j-to-slf4j"
+            ]
+        },
+        "org.apache.logging.log4j:log4j-to-slf4j": {
+            "locked": "2.13.3",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter-logging"
+            ]
+        },
+        "org.apiguardian:apiguardian-api": {
+            "locked": "1.1.0",
+            "transitive": [
+                "org.junit.jupiter:junit-jupiter-api",
+                "org.junit.jupiter:junit-jupiter-engine",
+                "org.junit.platform:junit-platform-commons",
+                "org.junit.platform:junit-platform-engine",
+                "org.junit.platform:junit-platform-launcher"
+            ]
+        },
+        "org.aspectj:aspectjweaver": {
+            "locked": "1.9.5",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter-aop"
+            ]
+        },
+        "org.checkerframework:checker-qual": {
+            "locked": "3.1.0",
+            "transitive": [
+                "com.github.ben-manes.caffeine:caffeine",
+                "com.google.guava:guava"
+            ]
+        },
+        "org.codehaus.groovy:groovy": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all",
+                "org.codehaus.groovy:groovy-ant",
+                "org.codehaus.groovy:groovy-cli-commons",
+                "org.codehaus.groovy:groovy-cli-picocli",
+                "org.codehaus.groovy:groovy-console",
+                "org.codehaus.groovy:groovy-datetime",
+                "org.codehaus.groovy:groovy-docgenerator",
+                "org.codehaus.groovy:groovy-groovydoc",
+                "org.codehaus.groovy:groovy-groovysh",
+                "org.codehaus.groovy:groovy-jmx",
+                "org.codehaus.groovy:groovy-json",
+                "org.codehaus.groovy:groovy-jsr223",
+                "org.codehaus.groovy:groovy-macro",
+                "org.codehaus.groovy:groovy-nio",
+                "org.codehaus.groovy:groovy-servlet",
+                "org.codehaus.groovy:groovy-sql",
+                "org.codehaus.groovy:groovy-swing",
+                "org.codehaus.groovy:groovy-templates",
+                "org.codehaus.groovy:groovy-test",
+                "org.codehaus.groovy:groovy-test-junit5",
+                "org.codehaus.groovy:groovy-testng",
+                "org.codehaus.groovy:groovy-xml"
+            ]
+        },
+        "org.codehaus.groovy:groovy-all": {
+            "locked": "2.5.11",
+            "transitive": [
+                "com.netflix.spinnaker.clouddriver.internal:cats-core"
+            ]
+        },
+        "org.codehaus.groovy:groovy-ant": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-cli-commons": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-cli-picocli": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all",
+                "org.codehaus.groovy:groovy-console",
+                "org.codehaus.groovy:groovy-docgenerator",
+                "org.codehaus.groovy:groovy-groovydoc",
+                "org.codehaus.groovy:groovy-groovysh"
+            ]
+        },
+        "org.codehaus.groovy:groovy-console": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all",
+                "org.codehaus.groovy:groovy-groovysh"
+            ]
+        },
+        "org.codehaus.groovy:groovy-datetime": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-docgenerator": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all",
+                "org.codehaus.groovy:groovy-groovydoc"
+            ]
+        },
+        "org.codehaus.groovy:groovy-groovydoc": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all",
+                "org.codehaus.groovy:groovy-ant"
+            ]
+        },
+        "org.codehaus.groovy:groovy-groovysh": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-jmx": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-json": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-jsr223": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-macro": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-nio": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-servlet": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-sql": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-swing": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all",
+                "org.codehaus.groovy:groovy-console"
+            ]
+        },
+        "org.codehaus.groovy:groovy-templates": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all",
+                "org.codehaus.groovy:groovy-console",
+                "org.codehaus.groovy:groovy-docgenerator",
+                "org.codehaus.groovy:groovy-groovydoc",
+                "org.codehaus.groovy:groovy-servlet"
+            ]
+        },
+        "org.codehaus.groovy:groovy-test": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-test-junit5": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-testng": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-xml": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all",
+                "org.codehaus.groovy:groovy-servlet",
+                "org.codehaus.groovy:groovy-templates"
+            ]
+        },
+        "org.hamcrest:hamcrest": {
+            "locked": "2.2",
+            "transitive": [
+                "org.hamcrest:hamcrest-core"
+            ]
+        },
+        "org.hamcrest:hamcrest-core": {
+            "locked": "2.2",
+            "transitive": [
+                "junit:junit"
+            ]
+        },
+        "org.hdrhistogram:HdrHistogram": {
+            "locked": "2.1.12",
+            "transitive": [
+                "io.micrometer:micrometer-core"
+            ]
+        },
+        "org.hibernate.validator:hibernate-validator": {
+            "locked": "6.0.18.Final",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-framework-common"
+            ]
+        },
+        "org.jboss.logging:jboss-logging": {
+            "locked": "3.4.1.Final",
+            "transitive": [
+                "org.hibernate.validator:hibernate-validator"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-stdlib": {
+            "locked": "1.4.31",
+            "transitive": [
+                "com.netflix.spinnaker.clouddriver.internal:cats-core",
+                "com.netflix.spinnaker.clouddriver.internal:clouddriver-api",
+                "com.netflix.spinnaker.kork:kork-plugins-api"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-stdlib-common": {
+            "locked": "1.4.31",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-stdlib"
+            ]
+        },
+        "org.jetbrains:annotations": {
+            "locked": "19.0.0",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-stdlib"
+            ]
+        },
+        "org.junit.jupiter:junit-jupiter-api": {
+            "locked": "5.6.2",
+            "transitive": [
+                "org.junit.jupiter:junit-jupiter-engine"
+            ]
+        },
+        "org.junit.jupiter:junit-jupiter-engine": {
+            "locked": "5.6.2",
+            "transitive": [
+                "org.codehaus.groovy:groovy-test-junit5"
+            ]
+        },
+        "org.junit.platform:junit-platform-commons": {
+            "locked": "1.6.2",
+            "transitive": [
+                "org.junit.jupiter:junit-jupiter-api",
+                "org.junit.platform:junit-platform-engine"
+            ]
+        },
+        "org.junit.platform:junit-platform-engine": {
+            "locked": "1.6.2",
+            "transitive": [
+                "org.junit.jupiter:junit-jupiter-engine",
+                "org.junit.platform:junit-platform-launcher"
+            ]
+        },
+        "org.junit.platform:junit-platform-launcher": {
+            "locked": "1.6.2",
+            "transitive": [
+                "org.codehaus.groovy:groovy-test-junit5"
+            ]
+        },
+        "org.latencyutils:LatencyUtils": {
+            "locked": "2.0.3",
+            "transitive": [
+                "io.micrometer:micrometer-core"
+            ]
+        },
+        "org.opentest4j:opentest4j": {
+            "locked": "1.2.0",
+            "transitive": [
+                "org.junit.jupiter:junit-jupiter-api",
+                "org.junit.platform:junit-platform-engine"
+            ]
+        },
+        "org.pf4j:pf4j": {
+            "locked": "3.2.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-plugins-api"
+            ]
+        },
+        "org.slf4j:jul-to-slf4j": {
+            "locked": "1.7.30",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter-logging"
+            ]
+        },
+        "org.slf4j:slf4j-api": {
+            "locked": "1.7.30",
+            "transitive": [
+                "ch.qos.logback:logback-classic",
+                "com.netflix.spectator:spectator-api",
+                "com.netflix.spectator:spectator-ext-gc",
+                "com.netflix.spectator:spectator-ext-jvm",
+                "com.netflix.spectator:spectator-reg-micrometer",
+                "com.netflix.spinnaker.clouddriver.internal:cats-core",
+                "com.netflix.spinnaker.kork:kork-plugins-api",
+                "io.github.resilience4j:resilience4j-annotations",
+                "io.github.resilience4j:resilience4j-bulkhead",
+                "io.github.resilience4j:resilience4j-circuitbreaker",
+                "io.github.resilience4j:resilience4j-circularbuffer",
+                "io.github.resilience4j:resilience4j-consumer",
+                "io.github.resilience4j:resilience4j-core",
+                "io.github.resilience4j:resilience4j-framework-common",
+                "io.github.resilience4j:resilience4j-micrometer",
+                "io.github.resilience4j:resilience4j-ratelimiter",
+                "io.github.resilience4j:resilience4j-retry",
+                "io.github.resilience4j:resilience4j-spring",
+                "io.github.resilience4j:resilience4j-spring-boot-common",
+                "io.github.resilience4j:resilience4j-spring-boot2",
+                "org.apache.logging.log4j:log4j-to-slf4j",
+                "org.pf4j:pf4j",
+                "org.slf4j:jul-to-slf4j",
+                "redis.clients:jedis"
+            ]
+        },
+        "org.springframework.boot:spring-boot": {
+            "locked": "2.2.5.RELEASE",
+            "transitive": [
+                "org.springframework.boot:spring-boot-actuator",
+                "org.springframework.boot:spring-boot-autoconfigure",
+                "org.springframework.boot:spring-boot-starter"
+            ]
+        },
+        "org.springframework.boot:spring-boot-actuator": {
+            "locked": "2.2.5.RELEASE",
+            "transitive": [
+                "org.springframework.boot:spring-boot-actuator-autoconfigure"
+            ]
+        },
+        "org.springframework.boot:spring-boot-actuator-autoconfigure": {
+            "locked": "2.2.5.RELEASE",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter-actuator"
+            ]
+        },
+        "org.springframework.boot:spring-boot-autoconfigure": {
+            "locked": "2.2.5.RELEASE",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-core",
+                "org.springframework.boot:spring-boot-actuator-autoconfigure",
+                "org.springframework.boot:spring-boot-starter"
+            ]
+        },
+        "org.springframework.boot:spring-boot-starter": {
+            "locked": "2.2.5.RELEASE",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter-actuator",
+                "org.springframework.boot:spring-boot-starter-aop"
+            ]
+        },
+        "org.springframework.boot:spring-boot-starter-actuator": {
+            "locked": "2.2.5.RELEASE",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-core",
+                "com.netflix.spinnaker.kork:kork-jedis"
+            ]
+        },
+        "org.springframework.boot:spring-boot-starter-aop": {
+            "locked": "2.2.5.RELEASE",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-core"
+            ]
+        },
+        "org.springframework.boot:spring-boot-starter-logging": {
+            "locked": "2.2.5.RELEASE",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter"
+            ]
+        },
+        "org.springframework:spring-aop": {
+            "locked": "5.2.9.RELEASE",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter-aop",
+                "org.springframework:spring-context"
+            ]
+        },
+        "org.springframework:spring-beans": {
+            "locked": "5.2.9.RELEASE",
+            "transitive": [
+                "org.springframework:spring-aop",
+                "org.springframework:spring-context"
+            ]
+        },
+        "org.springframework:spring-context": {
+            "locked": "5.2.9.RELEASE",
+            "transitive": [
+                "org.springframework.boot:spring-boot",
+                "org.springframework.boot:spring-boot-actuator-autoconfigure"
+            ]
+        },
+        "org.springframework:spring-core": {
+            "locked": "5.2.9.RELEASE",
+            "transitive": [
+                "org.springframework.boot:spring-boot",
+                "org.springframework.boot:spring-boot-actuator-autoconfigure",
+                "org.springframework.boot:spring-boot-starter",
+                "org.springframework:spring-aop",
+                "org.springframework:spring-beans",
+                "org.springframework:spring-context",
+                "org.springframework:spring-expression"
+            ]
+        },
+        "org.springframework:spring-expression": {
+            "locked": "5.2.9.RELEASE",
+            "transitive": [
+                "org.springframework:spring-context"
+            ]
+        },
+        "org.springframework:spring-jcl": {
+            "locked": "5.2.9.RELEASE",
+            "transitive": [
+                "org.springframework:spring-core"
+            ]
+        },
+        "org.testng:testng": {
+            "locked": "6.14.3",
+            "transitive": [
+                "org.codehaus.groovy:groovy-testng"
+            ]
+        },
+        "org.yaml:snakeyaml": {
+            "locked": "1.26",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter"
+            ]
+        },
+        "redis.clients:jedis": {
+            "locked": "3.1.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-jedis"
+            ]
+        }
+    },
+    "testAnnotationProcessor": {
+        "com.netflix.spinnaker.kork:kork-bom": {
+            "locked": "7.103.0"
+        },
+        "com.netflix.spinnaker.netflixplatform:netflixplatform-bom": {
+            "locked": "2.58.0"
+        },
+        "org.projectlombok:lombok": {
+            "locked": "1.18.12"
+        }
+    },
+    "testCompileClasspath": {
+        "ch.qos.logback:logback-classic": {
+            "locked": "1.2.3",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter-logging"
+            ]
+        },
+        "ch.qos.logback:logback-core": {
+            "locked": "1.2.3",
+            "transitive": [
+                "ch.qos.logback:logback-classic"
+            ]
+        },
+        "com.fasterxml.jackson.core:jackson-annotations": {
+            "locked": "2.11.1",
+            "transitive": [
+                "com.fasterxml.jackson.core:jackson-databind",
+                "com.fasterxml.jackson.datatype:jackson-datatype-jsr310"
+            ]
+        },
+        "com.fasterxml.jackson.core:jackson-core": {
+            "locked": "2.11.1",
+            "transitive": [
+                "com.fasterxml.jackson.core:jackson-databind",
+                "com.fasterxml.jackson.datatype:jackson-datatype-jsr310"
+            ]
+        },
+        "com.fasterxml.jackson.core:jackson-databind": {
+            "locked": "2.11.1",
+            "transitive": [
+                "com.fasterxml.jackson.datatype:jackson-datatype-jsr310",
+                "org.springframework.boot:spring-boot-actuator-autoconfigure"
+            ]
+        },
+        "com.fasterxml.jackson.datatype:jackson-datatype-jsr310": {
+            "locked": "2.11.1",
+            "transitive": [
+                "org.springframework.boot:spring-boot-actuator"
+            ]
+        },
+        "com.fasterxml:classmate": {
+            "locked": "1.5.1",
+            "transitive": [
+                "org.hibernate.validator:hibernate-validator"
+            ]
+        },
+        "com.github.ben-manes.caffeine:caffeine": {
+            "locked": "2.8.1",
+            "transitive": [
+                "com.github.ben-manes.caffeine:guava"
+            ]
+        },
+        "com.github.ben-manes.caffeine:guava": {
+            "locked": "2.8.1"
+        },
+        "com.github.zafarkhaja:java-semver": {
+            "locked": "0.9.0",
+            "transitive": [
+                "org.pf4j:pf4j"
+            ]
+        },
+        "com.google.code.findbugs:jsr305": {
+            "locked": "3.0.2",
+            "transitive": [
+                "com.google.guava:guava",
+                "com.netflix.spinnaker.kork:kork-annotations",
+                "com.netflix.spinnaker.kork:kork-core",
+                "com.netflix.spinnaker.kork:kork-exceptions"
+            ]
+        },
+        "com.google.errorprone:error_prone_annotations": {
+            "locked": "2.3.4",
+            "transitive": [
+                "com.github.ben-manes.caffeine:caffeine",
+                "com.google.guava:guava"
+            ]
+        },
+        "com.google.guava:failureaccess": {
+            "locked": "1.0.1",
+            "transitive": [
+                "com.google.guava:guava"
+            ]
+        },
+        "com.google.guava:guava": {
+            "locked": "28.2-jre",
+            "transitive": [
+                "com.github.ben-manes.caffeine:guava"
+            ]
+        },
+        "com.google.guava:listenablefuture": {
+            "locked": "9999.0-empty-to-avoid-conflict-with-guava",
+            "transitive": [
+                "com.google.guava:guava"
+            ]
+        },
+        "com.google.j2objc:j2objc-annotations": {
+            "locked": "1.3",
+            "transitive": [
+                "com.google.guava:guava"
+            ]
+        },
+        "com.netflix.spectator:spectator-api": {
+            "locked": "0.109.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-core",
+                "com.netflix.spinnaker.kork:kork-jedis"
+            ]
+        },
+        "com.netflix.spinnaker.clouddriver.internal:cats-core": {
+            "project": true
+        },
+        "com.netflix.spinnaker.clouddriver.internal:cats-test": {
+            "project": true
+        },
+        "com.netflix.spinnaker.clouddriver.internal:clouddriver-api": {
+            "project": true
+        },
+        "com.netflix.spinnaker.embedded-redis:embedded-redis": {
+            "locked": "0.8.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-jedis-test"
+            ]
+        },
+        "com.netflix.spinnaker.kork:kork-annotations": {
+            "locked": "7.103.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-core",
+                "com.netflix.spinnaker.kork:kork-plugins-api"
+            ]
+        },
+        "com.netflix.spinnaker.kork:kork-api": {
+            "locked": "7.103.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-core"
+            ]
+        },
+        "com.netflix.spinnaker.kork:kork-bom": {
+            "locked": "7.103.0"
+        },
+        "com.netflix.spinnaker.kork:kork-core": {
+            "locked": "7.103.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-jedis"
+            ]
+        },
+        "com.netflix.spinnaker.kork:kork-credentials-api": {
+            "locked": "7.103.0",
+            "transitive": [
+                "com.netflix.spinnaker.clouddriver.internal:clouddriver-api"
+            ]
+        },
+        "com.netflix.spinnaker.kork:kork-exceptions": {
+            "locked": "7.103.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-core"
+            ]
+        },
+        "com.netflix.spinnaker.kork:kork-jedis": {
+            "locked": "7.103.0"
+        },
+        "com.netflix.spinnaker.kork:kork-jedis-test": {
+            "locked": "7.103.0"
+        },
+        "com.netflix.spinnaker.kork:kork-plugins-api": {
+            "locked": "7.103.0",
+            "transitive": [
+                "com.netflix.spinnaker.clouddriver.internal:clouddriver-api",
+                "com.netflix.spinnaker.kork:kork-api"
+            ]
+        },
+        "com.netflix.spinnaker.netflixplatform:netflixplatform-bom": {
+            "locked": "2.58.0"
+        },
+        "com.thoughtworks.qdox:qdox": {
+            "locked": "1.12.1",
+            "transitive": [
+                "org.codehaus.groovy:groovy-docgenerator"
+            ]
+        },
+        "commons-cli:commons-cli": {
+            "locked": "1.4",
+            "transitive": [
+                "org.codehaus.groovy:groovy-cli-commons"
+            ]
+        },
+        "info.picocli:picocli": {
+            "locked": "4.0.1",
+            "transitive": [
+                "org.codehaus.groovy:groovy-cli-picocli"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-annotations": {
+            "locked": "1.0.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-core",
+                "io.github.resilience4j:resilience4j-spring"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-bulkhead": {
+            "locked": "1.0.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-framework-common"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-circuitbreaker": {
+            "locked": "1.1.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-framework-common"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-circularbuffer": {
+            "locked": "1.0.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-consumer"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-consumer": {
+            "locked": "1.0.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-spring"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-core": {
+            "locked": "1.1.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-bulkhead",
+                "io.github.resilience4j:resilience4j-circuitbreaker",
+                "io.github.resilience4j:resilience4j-consumer",
+                "io.github.resilience4j:resilience4j-framework-common",
+                "io.github.resilience4j:resilience4j-ratelimiter",
+                "io.github.resilience4j:resilience4j-retry"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-framework-common": {
+            "locked": "1.0.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-spring"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-micrometer": {
+            "locked": "1.1.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-spring-boot2"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-ratelimiter": {
+            "locked": "1.0.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-framework-common"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-retry": {
+            "locked": "1.0.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-core",
+                "io.github.resilience4j:resilience4j-framework-common"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-spring": {
+            "locked": "1.0.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-spring-boot-common"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-spring-boot-common": {
+            "locked": "1.0.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-spring-boot2"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-spring-boot2": {
+            "locked": "1.0.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-core"
+            ]
+        },
+        "io.micrometer:micrometer-core": {
+            "locked": "1.3.5",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter-actuator"
+            ]
+        },
+        "io.vavr:vavr": {
+            "locked": "0.10.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-annotations",
+                "io.github.resilience4j:resilience4j-bulkhead",
+                "io.github.resilience4j:resilience4j-circuitbreaker",
+                "io.github.resilience4j:resilience4j-circularbuffer",
+                "io.github.resilience4j:resilience4j-consumer",
+                "io.github.resilience4j:resilience4j-core",
+                "io.github.resilience4j:resilience4j-framework-common",
+                "io.github.resilience4j:resilience4j-micrometer",
+                "io.github.resilience4j:resilience4j-ratelimiter",
+                "io.github.resilience4j:resilience4j-retry",
+                "io.github.resilience4j:resilience4j-spring",
+                "io.github.resilience4j:resilience4j-spring-boot-common",
+                "io.github.resilience4j:resilience4j-spring-boot2"
+            ]
+        },
+        "io.vavr:vavr-match": {
+            "locked": "0.10.0",
+            "transitive": [
+                "io.vavr:vavr"
+            ]
+        },
+        "jakarta.annotation:jakarta.annotation-api": {
+            "locked": "1.3.5",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter"
+            ]
+        },
+        "javax.annotation:javax.annotation-api": {
+            "locked": "1.3.2",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-plugins-api"
+            ]
+        },
+        "javax.validation:validation-api": {
+            "locked": "2.0.1.Final",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-framework-common",
+                "org.hibernate.validator:hibernate-validator"
+            ]
+        },
+        "jline:jline": {
+            "locked": "2.14.6",
+            "transitive": [
+                "org.codehaus.groovy:groovy-groovysh"
+            ]
+        },
+        "junit:junit": {
+            "locked": "4.13",
+            "transitive": [
+                "org.codehaus.groovy:groovy-test",
+                "org.spockframework:spock-core"
+            ]
+        },
+        "org.apache.ant:ant": {
+            "locked": "1.10.5",
+            "transitive": [
+                "org.codehaus.groovy:groovy-ant"
+            ]
+        },
+        "org.apache.ant:ant-launcher": {
+            "locked": "1.10.5",
+            "transitive": [
+                "org.apache.ant:ant"
+            ]
+        },
+        "org.apache.commons:commons-pool2": {
+            "locked": "2.7.0",
+            "transitive": [
+                "redis.clients:jedis"
+            ]
+        },
+        "org.apache.logging.log4j:log4j-api": {
+            "locked": "2.13.3",
+            "transitive": [
+                "org.apache.logging.log4j:log4j-to-slf4j"
+            ]
+        },
+        "org.apache.logging.log4j:log4j-to-slf4j": {
+            "locked": "2.13.3",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter-logging"
+            ]
+        },
+        "org.apiguardian:apiguardian-api": {
+            "locked": "1.1.0",
+            "transitive": [
+                "org.junit.platform:junit-platform-commons",
+                "org.junit.platform:junit-platform-engine",
+                "org.junit.platform:junit-platform-launcher"
+            ]
+        },
+        "org.aspectj:aspectjweaver": {
+            "locked": "1.9.5",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter-aop"
+            ]
+        },
+        "org.checkerframework:checker-qual": {
+            "locked": "3.1.0",
+            "transitive": [
+                "com.github.ben-manes.caffeine:caffeine",
+                "com.google.guava:guava"
+            ]
+        },
+        "org.codehaus.groovy:groovy": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all",
+                "org.codehaus.groovy:groovy-ant",
+                "org.codehaus.groovy:groovy-cli-commons",
+                "org.codehaus.groovy:groovy-cli-picocli",
+                "org.codehaus.groovy:groovy-console",
+                "org.codehaus.groovy:groovy-datetime",
+                "org.codehaus.groovy:groovy-docgenerator",
+                "org.codehaus.groovy:groovy-groovydoc",
+                "org.codehaus.groovy:groovy-groovysh",
+                "org.codehaus.groovy:groovy-jmx",
+                "org.codehaus.groovy:groovy-json",
+                "org.codehaus.groovy:groovy-jsr223",
+                "org.codehaus.groovy:groovy-macro",
+                "org.codehaus.groovy:groovy-nio",
+                "org.codehaus.groovy:groovy-servlet",
+                "org.codehaus.groovy:groovy-sql",
+                "org.codehaus.groovy:groovy-swing",
+                "org.codehaus.groovy:groovy-templates",
+                "org.codehaus.groovy:groovy-test",
+                "org.codehaus.groovy:groovy-test-junit5",
+                "org.codehaus.groovy:groovy-testng",
+                "org.codehaus.groovy:groovy-xml",
+                "org.spockframework:spock-core"
+            ]
+        },
+        "org.codehaus.groovy:groovy-all": {
+            "locked": "2.5.11"
+        },
+        "org.codehaus.groovy:groovy-ant": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-cli-commons": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-cli-picocli": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all",
+                "org.codehaus.groovy:groovy-console",
+                "org.codehaus.groovy:groovy-docgenerator",
+                "org.codehaus.groovy:groovy-groovydoc",
+                "org.codehaus.groovy:groovy-groovysh"
+            ]
+        },
+        "org.codehaus.groovy:groovy-console": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all",
+                "org.codehaus.groovy:groovy-groovysh"
+            ]
+        },
+        "org.codehaus.groovy:groovy-datetime": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-docgenerator": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-groovydoc": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all",
+                "org.codehaus.groovy:groovy-ant"
+            ]
+        },
+        "org.codehaus.groovy:groovy-groovysh": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-jmx": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-json": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all",
+                "org.spockframework:spock-core"
+            ]
+        },
+        "org.codehaus.groovy:groovy-jsr223": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-macro": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all",
+                "org.spockframework:spock-core"
+            ]
+        },
+        "org.codehaus.groovy:groovy-nio": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all",
+                "org.spockframework:spock-core"
+            ]
+        },
+        "org.codehaus.groovy:groovy-servlet": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-sql": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all",
+                "org.spockframework:spock-core"
+            ]
+        },
+        "org.codehaus.groovy:groovy-swing": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all",
+                "org.codehaus.groovy:groovy-console"
+            ]
+        },
+        "org.codehaus.groovy:groovy-templates": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all",
+                "org.codehaus.groovy:groovy-console",
+                "org.codehaus.groovy:groovy-docgenerator",
+                "org.codehaus.groovy:groovy-groovydoc",
+                "org.codehaus.groovy:groovy-servlet",
+                "org.spockframework:spock-core"
+            ]
+        },
+        "org.codehaus.groovy:groovy-test": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all",
+                "org.spockframework:spock-core"
+            ]
+        },
+        "org.codehaus.groovy:groovy-test-junit5": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-testng": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-xml": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all",
+                "org.codehaus.groovy:groovy-servlet",
+                "org.codehaus.groovy:groovy-templates",
+                "org.spockframework:spock-core"
+            ]
+        },
+        "org.hamcrest:hamcrest": {
+            "locked": "2.2",
+            "transitive": [
+                "org.hamcrest:hamcrest-core"
+            ]
+        },
+        "org.hamcrest:hamcrest-core": {
+            "locked": "2.2",
+            "transitive": [
+                "junit:junit"
+            ]
+        },
+        "org.hdrhistogram:HdrHistogram": {
+            "locked": "2.1.11",
+            "transitive": [
+                "io.micrometer:micrometer-core"
+            ]
+        },
+        "org.hibernate.validator:hibernate-validator": {
+            "locked": "6.0.18.Final",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-framework-common"
+            ]
+        },
+        "org.jboss.logging:jboss-logging": {
+            "locked": "3.4.1.Final",
+            "transitive": [
+                "org.hibernate.validator:hibernate-validator"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-stdlib": {
+            "locked": "1.4.31",
+            "transitive": [
+                "com.netflix.spinnaker.clouddriver.internal:cats-core",
+                "com.netflix.spinnaker.clouddriver.internal:cats-test",
+                "com.netflix.spinnaker.clouddriver.internal:clouddriver-api",
+                "com.netflix.spinnaker.kork:kork-plugins-api"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-stdlib-common": {
+            "locked": "1.4.31",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-stdlib"
+            ]
+        },
+        "org.jetbrains:annotations": {
+            "locked": "19.0.0",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-stdlib"
+            ]
+        },
+        "org.junit.platform:junit-platform-commons": {
+            "locked": "1.6.2",
+            "transitive": [
+                "org.junit.platform:junit-platform-engine"
+            ]
+        },
+        "org.junit.platform:junit-platform-engine": {
+            "locked": "1.6.2",
+            "transitive": [
+                "org.junit.platform:junit-platform-launcher"
+            ]
+        },
+        "org.junit.platform:junit-platform-launcher": {
+            "locked": "1.6.2",
+            "transitive": [
+                "org.codehaus.groovy:groovy-test-junit5"
+            ]
+        },
+        "org.latencyutils:LatencyUtils": {
+            "locked": "2.0.3",
+            "transitive": [
+                "io.micrometer:micrometer-core"
+            ]
+        },
+        "org.opentest4j:opentest4j": {
+            "locked": "1.2.0",
+            "transitive": [
+                "org.junit.platform:junit-platform-engine"
+            ]
+        },
+        "org.pf4j:pf4j": {
+            "locked": "3.2.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-plugins-api"
+            ]
+        },
+        "org.slf4j:jul-to-slf4j": {
+            "locked": "1.7.30",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter-logging"
+            ]
+        },
+        "org.slf4j:slf4j-api": {
+            "locked": "1.7.30",
+            "transitive": [
+                "ch.qos.logback:logback-classic",
+                "com.netflix.spinnaker.kork:kork-plugins-api",
+                "io.github.resilience4j:resilience4j-annotations",
+                "io.github.resilience4j:resilience4j-bulkhead",
+                "io.github.resilience4j:resilience4j-circuitbreaker",
+                "io.github.resilience4j:resilience4j-circularbuffer",
+                "io.github.resilience4j:resilience4j-consumer",
+                "io.github.resilience4j:resilience4j-core",
+                "io.github.resilience4j:resilience4j-framework-common",
+                "io.github.resilience4j:resilience4j-micrometer",
+                "io.github.resilience4j:resilience4j-ratelimiter",
+                "io.github.resilience4j:resilience4j-retry",
+                "io.github.resilience4j:resilience4j-spring",
+                "io.github.resilience4j:resilience4j-spring-boot-common",
+                "io.github.resilience4j:resilience4j-spring-boot2",
+                "org.apache.logging.log4j:log4j-to-slf4j",
+                "org.pf4j:pf4j",
+                "org.slf4j:jul-to-slf4j",
+                "redis.clients:jedis"
+            ]
+        },
+        "org.spockframework:spock-core": {
+            "locked": "1.3-groovy-2.5"
+        },
+        "org.springframework.boot:spring-boot": {
+            "locked": "2.2.5.RELEASE",
+            "transitive": [
+                "org.springframework.boot:spring-boot-actuator",
+                "org.springframework.boot:spring-boot-autoconfigure",
+                "org.springframework.boot:spring-boot-starter"
+            ]
+        },
+        "org.springframework.boot:spring-boot-actuator": {
+            "locked": "2.2.5.RELEASE",
+            "transitive": [
+                "org.springframework.boot:spring-boot-actuator-autoconfigure"
+            ]
+        },
+        "org.springframework.boot:spring-boot-actuator-autoconfigure": {
+            "locked": "2.2.5.RELEASE",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter-actuator"
+            ]
+        },
+        "org.springframework.boot:spring-boot-autoconfigure": {
+            "locked": "2.2.5.RELEASE",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-core",
+                "org.springframework.boot:spring-boot-actuator-autoconfigure",
+                "org.springframework.boot:spring-boot-starter"
+            ]
+        },
+        "org.springframework.boot:spring-boot-starter": {
+            "locked": "2.2.5.RELEASE",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter-actuator",
+                "org.springframework.boot:spring-boot-starter-aop"
+            ]
+        },
+        "org.springframework.boot:spring-boot-starter-actuator": {
+            "locked": "2.2.5.RELEASE",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-core",
+                "com.netflix.spinnaker.kork:kork-jedis"
+            ]
+        },
+        "org.springframework.boot:spring-boot-starter-aop": {
+            "locked": "2.2.5.RELEASE",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-core"
+            ]
+        },
+        "org.springframework.boot:spring-boot-starter-logging": {
+            "locked": "2.2.5.RELEASE",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter"
+            ]
+        },
+        "org.springframework:spring-aop": {
+            "locked": "5.2.9.RELEASE",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter-aop",
+                "org.springframework:spring-context"
+            ]
+        },
+        "org.springframework:spring-beans": {
+            "locked": "5.2.9.RELEASE",
+            "transitive": [
+                "org.springframework:spring-aop",
+                "org.springframework:spring-context"
+            ]
+        },
+        "org.springframework:spring-context": {
+            "locked": "5.2.9.RELEASE",
+            "transitive": [
+                "org.springframework.boot:spring-boot",
+                "org.springframework.boot:spring-boot-actuator-autoconfigure"
+            ]
+        },
+        "org.springframework:spring-core": {
+            "locked": "5.2.9.RELEASE",
+            "transitive": [
+                "org.springframework.boot:spring-boot",
+                "org.springframework.boot:spring-boot-actuator-autoconfigure",
+                "org.springframework.boot:spring-boot-starter",
+                "org.springframework:spring-aop",
+                "org.springframework:spring-beans",
+                "org.springframework:spring-context",
+                "org.springframework:spring-expression"
+            ]
+        },
+        "org.springframework:spring-expression": {
+            "locked": "5.2.9.RELEASE",
+            "transitive": [
+                "org.springframework:spring-context"
+            ]
+        },
+        "org.springframework:spring-jcl": {
+            "locked": "5.2.9.RELEASE",
+            "transitive": [
+                "org.springframework:spring-core"
+            ]
+        },
+        "redis.clients:jedis": {
+            "locked": "3.1.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-jedis",
+                "com.netflix.spinnaker.kork:kork-jedis-test"
+            ]
+        }
+    },
+    "testRuntimeClasspath": {
+        "cglib:cglib-nodep": {
+            "locked": "3.3.0",
+            "transitive": [
+                "com.netflix.spinnaker.clouddriver.internal:cats-test"
+            ]
+        },
+        "ch.qos.logback:logback-classic": {
+            "locked": "1.2.3",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter-logging"
+            ]
+        },
+        "ch.qos.logback:logback-core": {
+            "locked": "1.2.3",
+            "transitive": [
+                "ch.qos.logback:logback-classic"
+            ]
+        },
+        "com.beust:jcommander": {
+            "locked": "1.72",
+            "transitive": [
+                "org.testng:testng"
+            ]
+        },
+        "com.fasterxml.jackson.core:jackson-annotations": {
+            "locked": "2.11.1",
+            "transitive": [
+                "com.fasterxml.jackson.core:jackson-databind",
+                "com.fasterxml.jackson.datatype:jackson-datatype-jsr310",
+                "com.netflix.spinnaker.clouddriver.internal:cats-core"
+            ]
+        },
+        "com.fasterxml.jackson.core:jackson-core": {
+            "locked": "2.11.1",
+            "transitive": [
+                "com.fasterxml.jackson.core:jackson-databind",
+                "com.fasterxml.jackson.datatype:jackson-datatype-jsr310"
+            ]
+        },
+        "com.fasterxml.jackson.core:jackson-databind": {
+            "locked": "2.11.1",
+            "transitive": [
+                "com.fasterxml.jackson.datatype:jackson-datatype-jsr310",
+                "org.springframework.boot:spring-boot-actuator-autoconfigure"
+            ]
+        },
+        "com.fasterxml.jackson.datatype:jackson-datatype-jsr310": {
+            "locked": "2.11.1",
+            "transitive": [
+                "org.springframework.boot:spring-boot-actuator",
+                "org.springframework.boot:spring-boot-actuator-autoconfigure"
+            ]
+        },
+        "com.fasterxml:classmate": {
+            "locked": "1.5.1",
+            "transitive": [
+                "org.hibernate.validator:hibernate-validator"
+            ]
+        },
+        "com.github.ben-manes.caffeine:caffeine": {
+            "locked": "2.8.1",
+            "transitive": [
+                "com.github.ben-manes.caffeine:guava"
+            ]
+        },
+        "com.github.ben-manes.caffeine:guava": {
+            "locked": "2.8.1"
+        },
+        "com.github.zafarkhaja:java-semver": {
+            "locked": "0.9.0",
+            "transitive": [
+                "org.pf4j:pf4j"
+            ]
+        },
+        "com.google.code.findbugs:jsr305": {
+            "locked": "3.0.2",
+            "transitive": [
+                "com.google.guava:guava",
+                "com.netflix.spinnaker.kork:kork-annotations",
+                "com.netflix.spinnaker.kork:kork-core",
+                "com.netflix.spinnaker.kork:kork-exceptions"
+            ]
+        },
+        "com.google.errorprone:error_prone_annotations": {
+            "locked": "2.3.4",
+            "transitive": [
+                "com.github.ben-manes.caffeine:caffeine",
+                "com.google.guava:guava"
+            ]
+        },
+        "com.google.guava:failureaccess": {
+            "locked": "1.0.1",
+            "transitive": [
+                "com.google.guava:guava"
+            ]
+        },
+        "com.google.guava:guava": {
+            "locked": "28.2-jre",
+            "transitive": [
+                "com.github.ben-manes.caffeine:guava",
+                "com.netflix.spinnaker.clouddriver.internal:cats-core"
+            ]
+        },
+        "com.google.guava:listenablefuture": {
+            "locked": "9999.0-empty-to-avoid-conflict-with-guava",
+            "transitive": [
+                "com.google.guava:guava"
+            ]
+        },
+        "com.google.j2objc:j2objc-annotations": {
+            "locked": "1.3",
+            "transitive": [
+                "com.google.guava:guava"
+            ]
+        },
+        "com.jayway.jsonpath:json-path": {
+            "locked": "2.4.0",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter-test"
+            ]
+        },
+        "com.netflix.frigga:frigga": {
+            "locked": "0.24.0",
+            "transitive": [
+                "com.netflix.spinnaker.clouddriver.internal:clouddriver-api",
+                "com.netflix.spinnaker.kork:kork-moniker"
+            ]
+        },
+        "com.netflix.spectator:spectator-api": {
+            "locked": "0.109.0",
+            "transitive": [
+                "com.netflix.spectator:spectator-ext-gc",
+                "com.netflix.spectator:spectator-ext-jvm",
+                "com.netflix.spectator:spectator-reg-micrometer",
+                "com.netflix.spinnaker.kork:kork-core",
+                "com.netflix.spinnaker.kork:kork-jedis"
+            ]
+        },
+        "com.netflix.spectator:spectator-ext-gc": {
+            "locked": "0.109.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-core"
+            ]
+        },
+        "com.netflix.spectator:spectator-ext-jvm": {
+            "locked": "0.109.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-core"
+            ]
+        },
+        "com.netflix.spectator:spectator-reg-micrometer": {
+            "locked": "0.109.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-core"
+            ]
+        },
+        "com.netflix.spinnaker.clouddriver.internal:cats-core": {
+            "project": true,
+            "transitive": [
+                "com.netflix.spinnaker.clouddriver.internal:cats-test"
+            ]
+        },
+        "com.netflix.spinnaker.clouddriver.internal:cats-test": {
+            "project": true
+        },
+        "com.netflix.spinnaker.clouddriver.internal:clouddriver-api": {
+            "project": true,
+            "transitive": [
+                "com.netflix.spinnaker.clouddriver.internal:cats-core",
+                "com.netflix.spinnaker.clouddriver.internal:cats-test"
+            ]
+        },
+        "com.netflix.spinnaker.embedded-redis:embedded-redis": {
+            "locked": "0.8.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-jedis-test"
+            ]
+        },
+        "com.netflix.spinnaker.kork:kork-annotations": {
+            "locked": "7.103.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-api",
+                "com.netflix.spinnaker.kork:kork-core",
+                "com.netflix.spinnaker.kork:kork-credentials-api",
+                "com.netflix.spinnaker.kork:kork-plugins-api"
+            ]
+        },
+        "com.netflix.spinnaker.kork:kork-api": {
+            "locked": "7.103.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-core"
+            ]
+        },
+        "com.netflix.spinnaker.kork:kork-bom": {
+            "locked": "7.103.0",
+            "transitive": [
+                "com.netflix.spinnaker.clouddriver.internal:cats-core",
+                "com.netflix.spinnaker.clouddriver.internal:cats-test",
+                "com.netflix.spinnaker.clouddriver.internal:clouddriver-api"
+            ]
+        },
+        "com.netflix.spinnaker.kork:kork-core": {
+            "locked": "7.103.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-jedis"
+            ]
+        },
+        "com.netflix.spinnaker.kork:kork-credentials-api": {
+            "locked": "7.103.0",
+            "transitive": [
+                "com.netflix.spinnaker.clouddriver.internal:clouddriver-api"
+            ]
+        },
+        "com.netflix.spinnaker.kork:kork-exceptions": {
+            "locked": "7.103.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-core",
+                "com.netflix.spinnaker.kork:kork-credentials-api"
+            ]
+        },
+        "com.netflix.spinnaker.kork:kork-jedis": {
+            "locked": "7.103.0"
+        },
+        "com.netflix.spinnaker.kork:kork-jedis-test": {
+            "locked": "7.103.0"
+        },
+        "com.netflix.spinnaker.kork:kork-moniker": {
+            "locked": "7.103.0",
+            "transitive": [
+                "com.netflix.spinnaker.clouddriver.internal:clouddriver-api"
+            ]
+        },
+        "com.netflix.spinnaker.kork:kork-plugins-api": {
+            "locked": "7.103.0",
+            "transitive": [
+                "com.netflix.spinnaker.clouddriver.internal:clouddriver-api",
+                "com.netflix.spinnaker.kork:kork-api"
+            ]
+        },
+        "com.netflix.spinnaker.netflixplatform:netflixplatform-bom": {
+            "locked": "2.58.0",
+            "transitive": [
+                "com.netflix.spinnaker.clouddriver.internal:cats-core",
+                "com.netflix.spinnaker.clouddriver.internal:cats-test",
+                "com.netflix.spinnaker.clouddriver.internal:clouddriver-api"
+            ]
+        },
+        "com.thoughtworks.qdox:qdox": {
+            "locked": "1.12.1",
+            "transitive": [
+                "org.codehaus.groovy:groovy-docgenerator"
+            ]
+        },
+        "com.typesafe:config": {
+            "locked": "1.4.0",
+            "transitive": [
+                "com.netflix.spectator:spectator-ext-jvm"
+            ]
+        },
+        "com.vaadin.external.google:android-json": {
+            "locked": "0.0.20131108.vaadin1",
+            "transitive": [
+                "org.skyscreamer:jsonassert"
+            ]
+        },
+        "commons-cli:commons-cli": {
+            "locked": "1.4",
+            "transitive": [
+                "org.codehaus.groovy:groovy-cli-commons"
+            ]
+        },
+        "info.picocli:picocli": {
+            "locked": "4.0.1",
+            "transitive": [
+                "org.codehaus.groovy:groovy-cli-picocli"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-annotations": {
+            "locked": "1.0.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-core",
+                "io.github.resilience4j:resilience4j-spring"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-bulkhead": {
+            "locked": "1.0.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-framework-common"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-circuitbreaker": {
+            "locked": "1.1.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-framework-common"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-circularbuffer": {
+            "locked": "1.0.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-consumer"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-consumer": {
+            "locked": "1.0.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-spring"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-core": {
+            "locked": "1.1.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-bulkhead",
+                "io.github.resilience4j:resilience4j-circuitbreaker",
+                "io.github.resilience4j:resilience4j-consumer",
+                "io.github.resilience4j:resilience4j-framework-common",
+                "io.github.resilience4j:resilience4j-ratelimiter",
+                "io.github.resilience4j:resilience4j-retry"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-framework-common": {
+            "locked": "1.0.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-spring"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-micrometer": {
+            "locked": "1.1.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-spring-boot2"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-ratelimiter": {
+            "locked": "1.0.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-framework-common"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-retry": {
+            "locked": "1.0.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-core",
+                "io.github.resilience4j:resilience4j-framework-common"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-spring": {
+            "locked": "1.0.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-spring-boot-common"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-spring-boot-common": {
+            "locked": "1.0.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-spring-boot2"
+            ]
+        },
+        "io.github.resilience4j:resilience4j-spring-boot2": {
+            "locked": "1.0.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-core"
+            ]
+        },
+        "io.micrometer:micrometer-core": {
+            "locked": "1.5.1",
+            "transitive": [
+                "com.netflix.spectator:spectator-reg-micrometer",
+                "org.springframework.boot:spring-boot-starter-actuator"
+            ]
+        },
+        "io.vavr:vavr": {
+            "locked": "0.10.0",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-annotations",
+                "io.github.resilience4j:resilience4j-bulkhead",
+                "io.github.resilience4j:resilience4j-circuitbreaker",
+                "io.github.resilience4j:resilience4j-circularbuffer",
+                "io.github.resilience4j:resilience4j-consumer",
+                "io.github.resilience4j:resilience4j-core",
+                "io.github.resilience4j:resilience4j-framework-common",
+                "io.github.resilience4j:resilience4j-micrometer",
+                "io.github.resilience4j:resilience4j-ratelimiter",
+                "io.github.resilience4j:resilience4j-retry",
+                "io.github.resilience4j:resilience4j-spring",
+                "io.github.resilience4j:resilience4j-spring-boot-common",
+                "io.github.resilience4j:resilience4j-spring-boot2"
+            ]
+        },
+        "io.vavr:vavr-match": {
+            "locked": "0.10.0",
+            "transitive": [
+                "io.vavr:vavr"
+            ]
+        },
+        "jakarta.activation:jakarta.activation-api": {
+            "locked": "1.2.2",
+            "transitive": [
+                "jakarta.xml.bind:jakarta.xml.bind-api"
+            ]
+        },
+        "jakarta.annotation:jakarta.annotation-api": {
+            "locked": "1.3.5",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter"
+            ]
+        },
+        "jakarta.xml.bind:jakarta.xml.bind-api": {
+            "locked": "2.3.2",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter-test"
+            ]
+        },
+        "javax.annotation:javax.annotation-api": {
+            "locked": "1.3.2",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-credentials-api",
+                "com.netflix.spinnaker.kork:kork-plugins-api"
+            ]
+        },
+        "javax.validation:validation-api": {
+            "locked": "2.0.1.Final",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-framework-common",
+                "org.hibernate.validator:hibernate-validator"
+            ]
+        },
+        "jline:jline": {
+            "locked": "2.14.6",
+            "transitive": [
+                "org.codehaus.groovy:groovy-groovysh"
+            ]
+        },
+        "junit:junit": {
+            "locked": "4.13",
+            "transitive": [
+                "org.codehaus.groovy:groovy-test",
+                "org.junit.vintage:junit-vintage-engine",
+                "org.spockframework:spock-core"
+            ]
+        },
+        "net.bytebuddy:byte-buddy": {
+            "locked": "1.10.8",
+            "transitive": [
+                "org.mockito:mockito-core"
+            ]
+        },
+        "net.bytebuddy:byte-buddy-agent": {
+            "locked": "1.10.8",
+            "transitive": [
+                "org.mockito:mockito-core"
+            ]
+        },
+        "net.minidev:accessors-smart": {
+            "locked": "1.2",
+            "transitive": [
+                "net.minidev:json-smart"
+            ]
+        },
+        "net.minidev:json-smart": {
+            "locked": "2.3",
+            "transitive": [
+                "com.jayway.jsonpath:json-path"
+            ]
+        },
+        "org.apache-extras.beanshell:bsh": {
+            "locked": "2.0b6",
+            "transitive": [
+                "org.testng:testng"
+            ]
+        },
+        "org.apache.ant:ant": {
+            "locked": "1.10.5",
+            "transitive": [
+                "org.apache.ant:ant-junit",
+                "org.codehaus.groovy:groovy-ant"
+            ]
+        },
+        "org.apache.ant:ant-antlr": {
+            "locked": "1.9.13",
+            "transitive": [
+                "org.codehaus.groovy:groovy-ant"
+            ]
+        },
+        "org.apache.ant:ant-junit": {
+            "locked": "1.9.13",
+            "transitive": [
+                "org.codehaus.groovy:groovy-ant"
+            ]
+        },
+        "org.apache.ant:ant-launcher": {
+            "locked": "1.10.5",
+            "transitive": [
+                "org.apache.ant:ant",
+                "org.codehaus.groovy:groovy-ant"
+            ]
+        },
+        "org.apache.commons:commons-pool2": {
+            "locked": "2.7.0",
+            "transitive": [
+                "redis.clients:jedis"
+            ]
+        },
+        "org.apache.logging.log4j:log4j-api": {
+            "locked": "2.13.3",
+            "transitive": [
+                "org.apache.logging.log4j:log4j-to-slf4j"
+            ]
+        },
+        "org.apache.logging.log4j:log4j-to-slf4j": {
+            "locked": "2.13.3",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter-logging"
+            ]
+        },
+        "org.apiguardian:apiguardian-api": {
+            "locked": "1.1.0",
+            "transitive": [
+                "org.junit.jupiter:junit-jupiter-api",
+                "org.junit.jupiter:junit-jupiter-engine",
+                "org.junit.jupiter:junit-jupiter-params",
+                "org.junit.platform:junit-platform-commons",
+                "org.junit.platform:junit-platform-engine",
+                "org.junit.platform:junit-platform-launcher",
+                "org.junit.vintage:junit-vintage-engine"
+            ]
+        },
+        "org.aspectj:aspectjweaver": {
+            "locked": "1.9.5",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter-aop"
+            ]
+        },
+        "org.assertj:assertj-core": {
+            "locked": "3.15.0",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter-test"
+            ]
+        },
+        "org.checkerframework:checker-qual": {
+            "locked": "3.1.0",
+            "transitive": [
+                "com.github.ben-manes.caffeine:caffeine",
+                "com.google.guava:guava"
+            ]
+        },
+        "org.codehaus.groovy:groovy": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all",
+                "org.codehaus.groovy:groovy-ant",
+                "org.codehaus.groovy:groovy-cli-commons",
+                "org.codehaus.groovy:groovy-cli-picocli",
+                "org.codehaus.groovy:groovy-console",
+                "org.codehaus.groovy:groovy-datetime",
+                "org.codehaus.groovy:groovy-docgenerator",
+                "org.codehaus.groovy:groovy-groovydoc",
+                "org.codehaus.groovy:groovy-groovysh",
+                "org.codehaus.groovy:groovy-jmx",
+                "org.codehaus.groovy:groovy-json",
+                "org.codehaus.groovy:groovy-jsr223",
+                "org.codehaus.groovy:groovy-macro",
+                "org.codehaus.groovy:groovy-nio",
+                "org.codehaus.groovy:groovy-servlet",
+                "org.codehaus.groovy:groovy-sql",
+                "org.codehaus.groovy:groovy-swing",
+                "org.codehaus.groovy:groovy-templates",
+                "org.codehaus.groovy:groovy-test",
+                "org.codehaus.groovy:groovy-test-junit5",
+                "org.codehaus.groovy:groovy-testng",
+                "org.codehaus.groovy:groovy-xml",
+                "org.spockframework:spock-core",
+                "org.spockframework:spock-spring"
+            ]
+        },
+        "org.codehaus.groovy:groovy-all": {
+            "locked": "2.5.11",
+            "transitive": [
+                "com.netflix.spinnaker.clouddriver.internal:cats-core",
+                "com.netflix.spinnaker.clouddriver.internal:cats-test"
+            ]
+        },
+        "org.codehaus.groovy:groovy-ant": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-cli-commons": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-cli-picocli": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all",
+                "org.codehaus.groovy:groovy-console",
+                "org.codehaus.groovy:groovy-docgenerator",
+                "org.codehaus.groovy:groovy-groovydoc",
+                "org.codehaus.groovy:groovy-groovysh"
+            ]
+        },
+        "org.codehaus.groovy:groovy-console": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all",
+                "org.codehaus.groovy:groovy-groovysh"
+            ]
+        },
+        "org.codehaus.groovy:groovy-datetime": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-docgenerator": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all",
+                "org.codehaus.groovy:groovy-groovydoc"
+            ]
+        },
+        "org.codehaus.groovy:groovy-groovydoc": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all",
+                "org.codehaus.groovy:groovy-ant"
+            ]
+        },
+        "org.codehaus.groovy:groovy-groovysh": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-jmx": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-json": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all",
+                "org.spockframework:spock-core",
+                "org.spockframework:spock-spring"
+            ]
+        },
+        "org.codehaus.groovy:groovy-jsr223": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-macro": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all",
+                "org.spockframework:spock-core",
+                "org.spockframework:spock-spring"
+            ]
+        },
+        "org.codehaus.groovy:groovy-nio": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all",
+                "org.spockframework:spock-core",
+                "org.spockframework:spock-spring"
+            ]
+        },
+        "org.codehaus.groovy:groovy-servlet": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-sql": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all",
+                "org.spockframework:spock-core",
+                "org.spockframework:spock-spring"
+            ]
+        },
+        "org.codehaus.groovy:groovy-swing": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all",
+                "org.codehaus.groovy:groovy-console"
+            ]
+        },
+        "org.codehaus.groovy:groovy-templates": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all",
+                "org.codehaus.groovy:groovy-console",
+                "org.codehaus.groovy:groovy-docgenerator",
+                "org.codehaus.groovy:groovy-groovydoc",
+                "org.codehaus.groovy:groovy-servlet",
+                "org.spockframework:spock-core",
+                "org.spockframework:spock-spring"
+            ]
+        },
+        "org.codehaus.groovy:groovy-test": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all",
+                "org.spockframework:spock-core",
+                "org.spockframework:spock-spring"
+            ]
+        },
+        "org.codehaus.groovy:groovy-test-junit5": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-testng": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all"
+            ]
+        },
+        "org.codehaus.groovy:groovy-xml": {
+            "locked": "2.5.11",
+            "transitive": [
+                "org.codehaus.groovy:groovy-all",
+                "org.codehaus.groovy:groovy-servlet",
+                "org.codehaus.groovy:groovy-templates",
+                "org.spockframework:spock-core",
+                "org.spockframework:spock-spring"
+            ]
+        },
+        "org.hamcrest:hamcrest": {
+            "locked": "2.2",
+            "transitive": [
+                "org.hamcrest:hamcrest-core",
+                "org.springframework.boot:spring-boot-starter-test"
+            ]
+        },
+        "org.hamcrest:hamcrest-core": {
+            "locked": "2.2",
+            "transitive": [
+                "junit:junit"
+            ]
+        },
+        "org.hdrhistogram:HdrHistogram": {
+            "locked": "2.1.12",
+            "transitive": [
+                "io.micrometer:micrometer-core"
+            ]
+        },
+        "org.hibernate.validator:hibernate-validator": {
+            "locked": "6.0.18.Final",
+            "transitive": [
+                "io.github.resilience4j:resilience4j-framework-common"
+            ]
+        },
+        "org.jboss.logging:jboss-logging": {
+            "locked": "3.4.1.Final",
+            "transitive": [
+                "org.hibernate.validator:hibernate-validator"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-stdlib": {
+            "locked": "1.4.31",
+            "transitive": [
+                "com.netflix.spinnaker.clouddriver.internal:cats-core",
+                "com.netflix.spinnaker.clouddriver.internal:cats-test",
+                "com.netflix.spinnaker.clouddriver.internal:clouddriver-api",
+                "com.netflix.spinnaker.kork:kork-plugins-api"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-stdlib-common": {
+            "locked": "1.4.31",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-stdlib"
+            ]
+        },
+        "org.jetbrains:annotations": {
+            "locked": "19.0.0",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-stdlib"
+            ]
+        },
+        "org.junit.jupiter:junit-jupiter": {
+            "locked": "5.6.2",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter-test"
+            ]
+        },
+        "org.junit.jupiter:junit-jupiter-api": {
+            "locked": "5.6.2",
+            "transitive": [
+                "org.junit.jupiter:junit-jupiter",
+                "org.junit.jupiter:junit-jupiter-engine",
+                "org.junit.jupiter:junit-jupiter-params",
+                "org.mockito:mockito-junit-jupiter"
+            ]
+        },
+        "org.junit.jupiter:junit-jupiter-engine": {
+            "locked": "5.6.2",
+            "transitive": [
+                "org.codehaus.groovy:groovy-test-junit5",
+                "org.junit.jupiter:junit-jupiter"
+            ]
+        },
+        "org.junit.jupiter:junit-jupiter-params": {
+            "locked": "5.6.2",
+            "transitive": [
+                "org.junit.jupiter:junit-jupiter"
+            ]
+        },
+        "org.junit.platform:junit-platform-commons": {
+            "locked": "1.6.2",
+            "transitive": [
+                "org.junit.jupiter:junit-jupiter-api",
+                "org.junit.platform:junit-platform-engine"
+            ]
+        },
+        "org.junit.platform:junit-platform-engine": {
+            "locked": "1.6.2",
+            "transitive": [
+                "org.junit.jupiter:junit-jupiter-engine",
+                "org.junit.platform:junit-platform-launcher",
+                "org.junit.vintage:junit-vintage-engine"
+            ]
+        },
+        "org.junit.platform:junit-platform-launcher": {
+            "locked": "1.6.2",
+            "transitive": [
+                "org.codehaus.groovy:groovy-test-junit5"
+            ]
+        },
+        "org.junit.vintage:junit-vintage-engine": {
+            "locked": "5.6.2",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter-test"
+            ]
+        },
+        "org.latencyutils:LatencyUtils": {
+            "locked": "2.0.3",
+            "transitive": [
+                "io.micrometer:micrometer-core"
+            ]
+        },
+        "org.mockito:mockito-core": {
+            "locked": "3.2.4",
+            "transitive": [
+                "org.mockito:mockito-junit-jupiter",
+                "org.springframework.boot:spring-boot-starter-test"
+            ]
+        },
+        "org.mockito:mockito-junit-jupiter": {
+            "locked": "3.1.0",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter-test"
+            ]
+        },
+        "org.objenesis:objenesis": {
+            "locked": "2.6",
+            "transitive": [
+                "com.netflix.spinnaker.clouddriver.internal:cats-test",
+                "org.mockito:mockito-core"
+            ]
+        },
+        "org.opentest4j:opentest4j": {
+            "locked": "1.2.0",
+            "transitive": [
+                "org.junit.jupiter:junit-jupiter-api",
+                "org.junit.platform:junit-platform-engine"
+            ]
+        },
+        "org.ow2.asm:asm": {
+            "locked": "7.3.1",
+            "transitive": [
+                "net.minidev:accessors-smart"
+            ]
+        },
+        "org.pf4j:pf4j": {
+            "locked": "3.2.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-plugins-api"
+            ]
+        },
+        "org.skyscreamer:jsonassert": {
+            "locked": "1.5.0",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter-test"
+            ]
+        },
+        "org.slf4j:jul-to-slf4j": {
+            "locked": "1.7.30",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter-logging"
+            ]
+        },
+        "org.slf4j:slf4j-api": {
+            "locked": "1.7.30",
+            "transitive": [
+                "ch.qos.logback:logback-classic",
+                "com.jayway.jsonpath:json-path",
+                "com.netflix.spectator:spectator-api",
+                "com.netflix.spectator:spectator-ext-gc",
+                "com.netflix.spectator:spectator-ext-jvm",
+                "com.netflix.spectator:spectator-reg-micrometer",
+                "com.netflix.spinnaker.clouddriver.internal:cats-core",
+                "com.netflix.spinnaker.kork:kork-plugins-api",
+                "io.github.resilience4j:resilience4j-annotations",
+                "io.github.resilience4j:resilience4j-bulkhead",
+                "io.github.resilience4j:resilience4j-circuitbreaker",
+                "io.github.resilience4j:resilience4j-circularbuffer",
+                "io.github.resilience4j:resilience4j-consumer",
+                "io.github.resilience4j:resilience4j-core",
+                "io.github.resilience4j:resilience4j-framework-common",
+                "io.github.resilience4j:resilience4j-micrometer",
+                "io.github.resilience4j:resilience4j-ratelimiter",
+                "io.github.resilience4j:resilience4j-retry",
+                "io.github.resilience4j:resilience4j-spring",
+                "io.github.resilience4j:resilience4j-spring-boot-common",
+                "io.github.resilience4j:resilience4j-spring-boot2",
+                "org.apache.logging.log4j:log4j-to-slf4j",
+                "org.pf4j:pf4j",
+                "org.slf4j:jul-to-slf4j",
+                "redis.clients:jedis"
+            ]
+        },
+        "org.spockframework:spock-core": {
+            "locked": "1.3-groovy-2.5",
+            "transitive": [
+                "com.netflix.spinnaker.clouddriver.internal:cats-test",
+                "org.spockframework:spock-spring"
+            ]
+        },
+        "org.spockframework:spock-spring": {
+            "locked": "1.3-groovy-2.5",
+            "transitive": [
+                "com.netflix.spinnaker.clouddriver.internal:cats-test"
+            ]
+        },
+        "org.springframework.boot:spring-boot": {
+            "locked": "2.2.5.RELEASE",
+            "transitive": [
+                "org.springframework.boot:spring-boot-actuator",
+                "org.springframework.boot:spring-boot-autoconfigure",
+                "org.springframework.boot:spring-boot-starter",
+                "org.springframework.boot:spring-boot-test"
+            ]
+        },
+        "org.springframework.boot:spring-boot-actuator": {
+            "locked": "2.2.5.RELEASE",
+            "transitive": [
+                "org.springframework.boot:spring-boot-actuator-autoconfigure"
+            ]
+        },
+        "org.springframework.boot:spring-boot-actuator-autoconfigure": {
+            "locked": "2.2.5.RELEASE",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter-actuator"
+            ]
+        },
+        "org.springframework.boot:spring-boot-autoconfigure": {
+            "locked": "2.2.5.RELEASE",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-core",
+                "org.springframework.boot:spring-boot-actuator-autoconfigure",
+                "org.springframework.boot:spring-boot-starter",
+                "org.springframework.boot:spring-boot-test-autoconfigure"
+            ]
+        },
+        "org.springframework.boot:spring-boot-starter": {
+            "locked": "2.2.5.RELEASE",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter-actuator",
+                "org.springframework.boot:spring-boot-starter-aop",
+                "org.springframework.boot:spring-boot-starter-test"
+            ]
+        },
+        "org.springframework.boot:spring-boot-starter-actuator": {
+            "locked": "2.2.5.RELEASE",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-core",
+                "com.netflix.spinnaker.kork:kork-jedis"
+            ]
+        },
+        "org.springframework.boot:spring-boot-starter-aop": {
+            "locked": "2.2.5.RELEASE",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-core"
+            ]
+        },
+        "org.springframework.boot:spring-boot-starter-logging": {
+            "locked": "2.2.5.RELEASE",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter"
+            ]
+        },
+        "org.springframework.boot:spring-boot-starter-test": {
+            "locked": "2.2.5.RELEASE",
+            "transitive": [
+                "com.netflix.spinnaker.clouddriver.internal:cats-test"
+            ]
+        },
+        "org.springframework.boot:spring-boot-test": {
+            "locked": "2.2.5.RELEASE",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter-test",
+                "org.springframework.boot:spring-boot-test-autoconfigure"
+            ]
+        },
+        "org.springframework.boot:spring-boot-test-autoconfigure": {
+            "locked": "2.2.5.RELEASE",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter-test"
+            ]
+        },
+        "org.springframework:spring-aop": {
+            "locked": "5.2.9.RELEASE",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter-aop",
+                "org.springframework:spring-context"
+            ]
+        },
+        "org.springframework:spring-beans": {
+            "locked": "5.2.9.RELEASE",
+            "transitive": [
+                "org.springframework:spring-aop",
+                "org.springframework:spring-context"
+            ]
+        },
+        "org.springframework:spring-context": {
+            "locked": "5.2.9.RELEASE",
+            "transitive": [
+                "org.springframework.boot:spring-boot",
+                "org.springframework.boot:spring-boot-actuator-autoconfigure"
+            ]
+        },
+        "org.springframework:spring-core": {
+            "locked": "5.2.9.RELEASE",
+            "transitive": [
+                "org.springframework.boot:spring-boot",
+                "org.springframework.boot:spring-boot-actuator-autoconfigure",
+                "org.springframework.boot:spring-boot-starter",
+                "org.springframework.boot:spring-boot-starter-test",
+                "org.springframework:spring-aop",
+                "org.springframework:spring-beans",
+                "org.springframework:spring-context",
+                "org.springframework:spring-expression",
+                "org.springframework:spring-test"
+            ]
+        },
+        "org.springframework:spring-expression": {
+            "locked": "5.2.9.RELEASE",
+            "transitive": [
+                "org.springframework:spring-context"
+            ]
+        },
+        "org.springframework:spring-jcl": {
+            "locked": "5.2.9.RELEASE",
+            "transitive": [
+                "org.springframework:spring-core"
+            ]
+        },
+        "org.springframework:spring-test": {
+            "locked": "5.2.9.RELEASE",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter-test"
+            ]
+        },
+        "org.testng:testng": {
+            "locked": "6.14.3",
+            "transitive": [
+                "org.codehaus.groovy:groovy-testng"
+            ]
+        },
+        "org.xmlunit:xmlunit-core": {
+            "locked": "2.6.3",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter-test"
+            ]
+        },
+        "org.yaml:snakeyaml": {
+            "locked": "1.26",
+            "transitive": [
+                "org.springframework.boot:spring-boot-starter"
+            ]
+        },
+        "redis.clients:jedis": {
+            "locked": "3.1.0",
+            "transitive": [
+                "com.netflix.spinnaker.kork:kork-jedis",
+                "com.netflix.spinnaker.kork:kork-jedis-test"
+            ]
+        }
+    }
+}

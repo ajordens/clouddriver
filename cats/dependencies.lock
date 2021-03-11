@@ -1,0 +1,347 @@
+{
+    "annotationProcessor": {
+        "com.netflix.spinnaker.kork:kork-bom": {
+            "locked": "7.103.0"
+        },
+        "com.netflix.spinnaker.netflixplatform:netflixplatform-bom": {
+            "locked": "2.58.0"
+        },
+        "org.projectlombok:lombok": {
+            "locked": "1.18.12"
+        }
+    },
+    "compileClasspath": {
+        "com.netflix.spinnaker.kork:kork-bom": {
+            "locked": "7.103.0"
+        },
+        "com.netflix.spinnaker.netflixplatform:netflixplatform-bom": {
+            "locked": "2.58.0"
+        },
+        "org.jetbrains.kotlin:kotlin-stdlib": {
+            "locked": "1.4.31"
+        },
+        "org.jetbrains.kotlin:kotlin-stdlib-common": {
+            "locked": "1.4.31",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-stdlib"
+            ]
+        },
+        "org.jetbrains:annotations": {
+            "locked": "19.0.0",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-stdlib"
+            ]
+        },
+        "org.projectlombok:lombok": {
+            "locked": "1.18.12"
+        }
+    },
+    "kotlinCompilerClasspath": {
+        "org.jetbrains.intellij.deps:trove4j": {
+            "locked": "1.0.20181211",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-compiler-embeddable"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-compiler-embeddable": {
+            "locked": "1.4.10"
+        },
+        "org.jetbrains.kotlin:kotlin-daemon-embeddable": {
+            "locked": "1.4.10",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-compiler-embeddable"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-reflect": {
+            "locked": "1.4.10",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-compiler-embeddable"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-script-runtime": {
+            "locked": "1.4.10",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-compiler-embeddable"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-stdlib": {
+            "locked": "1.4.10",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-compiler-embeddable",
+                "org.jetbrains.kotlin:kotlin-reflect"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-stdlib-common": {
+            "locked": "1.4.10",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-stdlib"
+            ]
+        },
+        "org.jetbrains:annotations": {
+            "locked": "13.0",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-stdlib"
+            ]
+        }
+    },
+    "kotlinCompilerPluginClasspath": {
+        "org.jetbrains.kotlin:kotlin-allopen": {
+            "locked": "1.4.10"
+        },
+        "org.jetbrains.kotlin:kotlin-gradle-plugin-api": {
+            "locked": "1.4.10",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-allopen"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-gradle-plugin-model": {
+            "locked": "1.4.10",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-allopen"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-script-runtime": {
+            "locked": "1.4.10",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-scripting-jvm"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-scripting-common": {
+            "locked": "1.4.10",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-scripting-compiler-impl-embeddable",
+                "org.jetbrains.kotlin:kotlin-scripting-jvm"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-scripting-compiler-embeddable": {
+            "locked": "1.4.10"
+        },
+        "org.jetbrains.kotlin:kotlin-scripting-compiler-impl-embeddable": {
+            "locked": "1.4.10",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-scripting-compiler-embeddable"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-scripting-jvm": {
+            "locked": "1.4.10",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-scripting-compiler-impl-embeddable"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-stdlib": {
+            "locked": "1.4.10",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-allopen",
+                "org.jetbrains.kotlin:kotlin-gradle-plugin-api",
+                "org.jetbrains.kotlin:kotlin-gradle-plugin-model",
+                "org.jetbrains.kotlin:kotlin-scripting-common",
+                "org.jetbrains.kotlin:kotlin-scripting-compiler-embeddable",
+                "org.jetbrains.kotlin:kotlin-scripting-compiler-impl-embeddable",
+                "org.jetbrains.kotlin:kotlin-scripting-jvm",
+                "org.jetbrains.kotlinx:kotlinx-coroutines-core"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-stdlib-common": {
+            "locked": "1.4.10",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-stdlib",
+                "org.jetbrains.kotlinx:kotlinx-coroutines-core"
+            ]
+        },
+        "org.jetbrains.kotlinx:kotlinx-coroutines-core": {
+            "locked": "1.3.7",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-scripting-common",
+                "org.jetbrains.kotlin:kotlin-scripting-compiler-impl-embeddable"
+            ]
+        },
+        "org.jetbrains:annotations": {
+            "locked": "13.0",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-stdlib"
+            ]
+        }
+    },
+    "kotlinKlibCommonizerClasspath": {
+        "org.jetbrains.intellij.deps:trove4j": {
+            "locked": "1.0.20181211",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-compiler-embeddable"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-compiler-embeddable": {
+            "locked": "1.4.10",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-klib-commonizer-embeddable"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-daemon-embeddable": {
+            "locked": "1.4.10",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-compiler-embeddable"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-klib-commonizer-embeddable": {
+            "locked": "1.4.10"
+        },
+        "org.jetbrains.kotlin:kotlin-reflect": {
+            "locked": "1.4.10",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-compiler-embeddable"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-script-runtime": {
+            "locked": "1.4.10",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-compiler-embeddable"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-stdlib": {
+            "locked": "1.4.10",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-compiler-embeddable",
+                "org.jetbrains.kotlin:kotlin-klib-commonizer-embeddable",
+                "org.jetbrains.kotlin:kotlin-reflect"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-stdlib-common": {
+            "locked": "1.4.10",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-stdlib"
+            ]
+        },
+        "org.jetbrains:annotations": {
+            "locked": "13.0",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-stdlib"
+            ]
+        }
+    },
+    "runtimeClasspath": {
+        "com.netflix.spinnaker.kork:kork-bom": {
+            "locked": "7.103.0"
+        },
+        "com.netflix.spinnaker.netflixplatform:netflixplatform-bom": {
+            "locked": "2.58.0"
+        },
+        "org.jetbrains.kotlin:kotlin-stdlib": {
+            "locked": "1.4.31"
+        },
+        "org.jetbrains.kotlin:kotlin-stdlib-common": {
+            "locked": "1.4.31",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-stdlib"
+            ]
+        },
+        "org.jetbrains:annotations": {
+            "locked": "19.0.0",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-stdlib"
+            ]
+        }
+    },
+    "testAnnotationProcessor": {
+        "com.netflix.spinnaker.kork:kork-bom": {
+            "locked": "7.103.0"
+        },
+        "com.netflix.spinnaker.netflixplatform:netflixplatform-bom": {
+            "locked": "2.58.0"
+        },
+        "org.projectlombok:lombok": {
+            "locked": "1.18.12"
+        }
+    },
+    "testCompileClasspath": {
+        "com.netflix.spinnaker.kork:kork-bom": {
+            "locked": "7.103.0"
+        },
+        "com.netflix.spinnaker.netflixplatform:netflixplatform-bom": {
+            "locked": "2.58.0"
+        },
+        "org.jetbrains.kotlin:kotlin-stdlib": {
+            "locked": "1.4.31"
+        },
+        "org.jetbrains.kotlin:kotlin-stdlib-common": {
+            "locked": "1.4.31",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-stdlib"
+            ]
+        },
+        "org.jetbrains:annotations": {
+            "locked": "19.0.0",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-stdlib"
+            ]
+        }
+    },
+    "testRuntimeClasspath": {
+        "com.netflix.spinnaker.kork:kork-bom": {
+            "locked": "7.103.0"
+        },
+        "com.netflix.spinnaker.netflixplatform:netflixplatform-bom": {
+            "locked": "2.58.0"
+        },
+        "junit:junit": {
+            "locked": "4.13",
+            "transitive": [
+                "org.junit.vintage:junit-vintage-engine"
+            ]
+        },
+        "org.apiguardian:apiguardian-api": {
+            "locked": "1.1.0",
+            "transitive": [
+                "org.junit.platform:junit-platform-commons",
+                "org.junit.platform:junit-platform-engine",
+                "org.junit.vintage:junit-vintage-engine"
+            ]
+        },
+        "org.hamcrest:hamcrest": {
+            "locked": "2.2",
+            "transitive": [
+                "org.hamcrest:hamcrest-core"
+            ]
+        },
+        "org.hamcrest:hamcrest-core": {
+            "locked": "2.2",
+            "transitive": [
+                "junit:junit"
+            ]
+        },
+        "org.jetbrains.kotlin:kotlin-stdlib": {
+            "locked": "1.4.31"
+        },
+        "org.jetbrains.kotlin:kotlin-stdlib-common": {
+            "locked": "1.4.31",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-stdlib"
+            ]
+        },
+        "org.jetbrains:annotations": {
+            "locked": "19.0.0",
+            "transitive": [
+                "org.jetbrains.kotlin:kotlin-stdlib"
+            ]
+        },
+        "org.junit.platform:junit-platform-commons": {
+            "locked": "1.6.2",
+            "transitive": [
+                "org.junit.platform:junit-platform-engine"
+            ]
+        },
+        "org.junit.platform:junit-platform-engine": {
+            "locked": "1.6.2",
+            "transitive": [
+                "org.junit.vintage:junit-vintage-engine"
+            ]
+        },
+        "org.junit.vintage:junit-vintage-engine": {
+            "locked": "5.6.2"
+        },
+        "org.opentest4j:opentest4j": {
+            "locked": "1.2.0",
+            "transitive": [
+                "org.junit.platform:junit-platform-engine"
+            ]
+        }
+    }
+}
