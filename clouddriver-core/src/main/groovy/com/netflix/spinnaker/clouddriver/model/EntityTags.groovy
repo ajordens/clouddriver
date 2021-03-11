@@ -22,6 +22,7 @@ import com.fasterxml.jackson.annotation.JsonAnySetter
 import com.fasterxml.jackson.annotation.JsonIgnore
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.fasterxml.jackson.databind.ObjectMapper
+import groovy.json.StringEscapeUtils
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 class EntityTags {
@@ -170,6 +171,25 @@ class EntityTags {
           try {
             return objectMapper.readValue(value.toString(), Map.class)
           } catch (Exception e) {
+            /*
+             * Hack around an issue that current exists where it _looks_ like object tags were `writeValueAsString()`
+             * multiple times.
+             */
+            def unescaped = StringEscapeUtils.unescapeJavaScript(value.toString())
+            if (unescaped.startsWith('"')) {
+              unescaped = unescaped.substring(1, unescaped.length())
+            }
+
+            if (unescaped.endsWith('"')) {
+              unescaped = unescaped.substring(0, unescaped.length() - 1)
+            }
+
+            try {
+              return objectMapper.readValue(unescaped, Map.class)
+            } catch (Exception e2) {
+              // do nothing
+            }
+
             return value
           }
         default:
