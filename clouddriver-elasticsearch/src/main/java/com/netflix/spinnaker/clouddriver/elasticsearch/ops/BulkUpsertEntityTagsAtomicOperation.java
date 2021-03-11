@@ -116,7 +116,7 @@ public class BulkUpsertEntityTagsAtomicOperation
 
               getTask().updateStatus(BASE_PHASE, "Pushing tags to Elastic Search");
               updateMetadataFromDurableTagsAndIndex(modifiedEntityTags, durableTags, result);
-              result.upserted.addAll(modifiedEntityTags);
+              result.upsertedCount += modifiedEntityTags.size();
             });
     return result;
   }

@@ -22,7 +22,7 @@ import java.util.Collection;
 
 public class BulkUpsertEntityTagsAtomicOperationResult {
 
-  public Collection<EntityTags> upserted = new ArrayList<>();
+  public Integer upsertedCount = 0;
   public Collection<UpsertFailureResult> failures = new ArrayList<>();
 
   public static class UpsertFailureResult {

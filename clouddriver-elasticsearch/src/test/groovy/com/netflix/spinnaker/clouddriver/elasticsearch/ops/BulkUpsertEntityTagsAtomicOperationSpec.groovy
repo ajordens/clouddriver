@@ -222,7 +222,7 @@ class BulkUpsertEntityTagsAtomicOperationSpec extends Specification {
 
     then:
     result.failures.size() == 1
-    result.upserted.size() == 3
+    result.upsertedCount == 3
     description.entityTags.size() == 3
     4 * accountCredentialsProvider.getAll() >> { return [testCredentials] }
     1 * front50Service.getAllEntityTagsById(_) >> []
