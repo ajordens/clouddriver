@@ -116,12 +116,17 @@ class AmazonNamedImageLookupController {
         it
       }
     }.flatten() as Collection<String>).each {
-      // associate tags with their AMI's image id
-      byImageName[it.attributes.name as String].tagsByImageId[it.attributes.imageId as String] =
-        ((it.attributes.tags as List)?.collectEntries { [it.key.toLowerCase(), it.value] }) + [
+      def baseAmiTags = [:]
+      if (it.attributes.description) {
+        baseAmiTags = [
           "base_ami_name": baseAmiName(it.attributes.description as String),
           "base_ami_id"  : baseAmiId(it.attributes.description as String)
         ]
+      }
+
+      // associate tags with their AMI's image id
+      byImageName[it.attributes.name as String].tagsByImageId[it.attributes.imageId as String] =
+        ((it.attributes.tags as List)?.collectEntries { [it.key.toLowerCase(), it.value] }) + baseAmiTags
     }
 
     for (CacheData data : namedImages) {
@@ -144,10 +149,15 @@ class AmazonNamedImageLookupController {
       thisImage.attributes.creationDate = data.attributes.creationDate
       thisImage.accounts.add(namedImageKeyParts.account)
       thisImage.amis[amiKeyParts.region].add(amiKeyParts.imageId)
-      thisImage.tags.putAll((data.attributes.tags as List)?.collectEntries { [it.key.toLowerCase(), it.value] } + [
-        "base_ami_name": baseAmiName(data.attributes.description as String),
-        "base_ami_id"  : baseAmiId(data.attributes.description as String)
-      ])
+
+      def baseAmiTags = [:]
+      if (data.attributes.description) {
+        baseAmiTags = [
+          "base_ami_name": baseAmiName(data.attributes.description as String),
+          "base_ami_id"  : baseAmiId(data.attributes.description as String)
+        ]
+      }
+      thisImage.tags.putAll((data.attributes.tags as List)?.collectEntries { [it.key.toLowerCase(), it.value] } + baseAmiTags)
       thisImage.tagsByImageId[data.attributes.imageId as String] = thisImage.tags
     }
 
